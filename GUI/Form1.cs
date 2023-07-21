@@ -15,6 +15,7 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -25,6 +26,46 @@ namespace GUI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void customizeDesign()
+        {
+            pnSubHangHoa.Visible = false;
+            pnSubQuanLy.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if(pnSubHangHoa.Visible == true)
+            {
+                pnSubHangHoa.Visible = false;
+            }
+            if(pnSubQuanLy.Visible== true)
+            {
+                pnSubQuanLy.Visible = false;
+            }
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            } else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
+        private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnSubHangHoa);
+        }
+
+        private void btnQuanLy_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnSubQuanLy);
         }
     }
 }
