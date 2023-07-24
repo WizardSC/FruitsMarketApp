@@ -36,6 +36,7 @@ namespace GUI
 
         private void hideSubMenu()
         {
+            
             if(pnSubHangHoa.Visible == true)
             
                 pnSubHangHoa.Visible = false;
@@ -45,6 +46,7 @@ namespace GUI
                 pnSubQuanLy.Visible = false;
             
         }
+        
 
         private void showSubMenu(Panel subMenu)
         {
@@ -58,7 +60,12 @@ namespace GUI
             }
         }
 
-        
+        private void hidePnLB(Panel pn)
+        {
+            pnLBTrangChu.Visible = false;
+            panel1.Visible = false;
+            pn.Visible = true;
+        }
        
 
         private void customButton2_Click(object sender, EventArgs e)
@@ -74,17 +81,29 @@ namespace GUI
         
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
+            hidePnLB(panel1);
+            
+            
             showSubMenu(pnSubHangHoa);
+            
         }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-
+            hidePnLB(pnLBTrangChu);
+            
+            hideSubMenu();
         }
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
             showSubMenu(pnSubQuanLy);
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            pnLBTrangChu.Height = btnNhanVien.Height;
+            pnLBTrangChu.Top = btnNhanVien.Top;
         }
     }
 }
