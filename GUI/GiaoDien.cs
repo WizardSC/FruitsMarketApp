@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Form1 : Form
+    public partial class GiaoDien : Form
     {
-        public Form1()
+        public GiaoDien()
         {
             InitializeComponent();
             customizeDesign();
@@ -67,8 +67,22 @@ namespace GUI
             pnLBPhieuNhap.Visible = false;
             pn.Visible = true;
         }
-       
-
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnChucNang.Controls.Add(childForm);
+            pnChucNang.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         
 
         #region click button menu
@@ -98,6 +112,7 @@ namespace GUI
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             hidePnLB(pnLBNhanVien);
+            openChildForm(new NhanVien());
         }
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
