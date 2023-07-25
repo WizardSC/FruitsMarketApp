@@ -18,15 +18,9 @@ namespace GUI
             customizeDesign();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+       
 
         private void customizeDesign()
         {
@@ -63,27 +57,24 @@ namespace GUI
         private void hidePnLB(Panel pn)
         {
             pnLBTrangChu.Visible = false;
-            panel1.Visible = false;
+            pnLBHangHoa.Visible = false;
+            pnLBBanHang.Visible = false;
+            pnLBHoaDon.Visible = false;
+            pnLBKhachHang.Visible = false;
+            pnLBNhanVien.Visible = false;
+            pnLBNhapHang.Visible = false;
+            pnLBQuanLy.Visible = false;
+            pnLBPhieuNhap.Visible = false;
             pn.Visible = true;
         }
        
 
-        private void customButton2_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Xin chao");
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Test");
-        }
-
         
+
+        #region click button menu
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
-            hidePnLB(panel1);
-            
-            
+            hidePnLB(pnLBHangHoa);
             showSubMenu(pnSubHangHoa);
             
         }
@@ -99,11 +90,45 @@ namespace GUI
         {
             showSubMenu(pnSubQuanLy);
         }
-
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            hidePnLB(pnLBBanHang);
+            
+        }
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            pnLBTrangChu.Height = btnNhanVien.Height;
-            pnLBTrangChu.Top = btnNhanVien.Top;
+            hidePnLB(pnLBNhanVien);
+        }
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            hidePnLB(pnLBHoaDon);
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            hidePnLB(pnLBNhapHang);
+        }
+
+        private void btnPhieuNhap_Click(object sender, EventArgs e)
+        {
+            hidePnLB(pnLBPhieuNhap);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            hidePnLB(pnLBKhachHang);
+        }
+
+        #endregion
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
