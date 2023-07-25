@@ -102,6 +102,7 @@ namespace GUI
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
+            hidePnLB(pnLBQuanLy);
             showSubMenu(pnSubQuanLy);
         }
         private void btnBanHang_Click(object sender, EventArgs e)

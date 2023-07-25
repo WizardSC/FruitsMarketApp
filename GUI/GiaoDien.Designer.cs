@@ -33,36 +33,34 @@
             this.pnSubQuanLy = new System.Windows.Forms.Panel();
             this.pnLBNhanVien = new System.Windows.Forms.Panel();
             this.pnLBKhachHang = new System.Windows.Forms.Panel();
-            this.btnKhachHang = new GUI.MyCustom.CustomButton();
-            this.btnNhanVien = new GUI.MyCustom.CustomButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnQuanLy = new System.Windows.Forms.Panel();
             this.pnLBQuanLy = new System.Windows.Forms.Panel();
-            this.btnQuanLy = new GUI.MyCustom.CustomButton();
             this.pnSubHangHoa = new System.Windows.Forms.Panel();
             this.pnLBPhieuNhap = new System.Windows.Forms.Panel();
             this.pnLBNhapHang = new System.Windows.Forms.Panel();
             this.pnLBHoaDon = new System.Windows.Forms.Panel();
             this.pnLBBanHang = new System.Windows.Forms.Panel();
+            this.pnHangHoa = new System.Windows.Forms.Panel();
+            this.pnLBHangHoa = new System.Windows.Forms.Panel();
+            this.pnTrangChu = new System.Windows.Forms.Panel();
+            this.pnLBTrangChu = new System.Windows.Forms.Panel();
+            this.pnImage = new System.Windows.Forms.Panel();
+            this.pnChucNang = new System.Windows.Forms.Panel();
+            this.btnKhachHang = new GUI.MyCustom.CustomButton();
+            this.btnNhanVien = new GUI.MyCustom.CustomButton();
+            this.btnQuanLy = new GUI.MyCustom.CustomButton();
             this.btnPhieuNhap = new GUI.MyCustom.CustomButton();
             this.btnNhapHang = new GUI.MyCustom.CustomButton();
             this.btnHoaDon = new GUI.MyCustom.CustomButton();
             this.btnBanHang = new GUI.MyCustom.CustomButton();
-            this.pnHangHoa = new System.Windows.Forms.Panel();
-            this.pnLBHangHoa = new System.Windows.Forms.Panel();
             this.btnHangHoa = new GUI.MyCustom.CustomButton();
-            this.pnTrangChu = new System.Windows.Forms.Panel();
-            this.pnLBTrangChu = new System.Windows.Forms.Panel();
             this.btnTrangChu = new GUI.MyCustom.CustomButton();
-            this.pnImage = new System.Windows.Forms.Panel();
             this.gradientPanel1 = new GUI.MyCustom.GradientPanel();
             this.btnMinimize = new GUI.MyCustom.CustomButton();
             this.btnClose = new GUI.MyCustom.CustomButton();
-            this.pnChucNang = new System.Windows.Forms.Panel();
             this.pnSideMenu.SuspendLayout();
             this.pnSubQuanLy.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnQuanLy.SuspendLayout();
             this.pnSubHangHoa.SuspendLayout();
             this.pnHangHoa.SuspendLayout();
             this.pnTrangChu.SuspendLayout();
@@ -74,7 +72,7 @@
             this.pnSideMenu.AutoScroll = true;
             this.pnSideMenu.BackColor = System.Drawing.Color.White;
             this.pnSideMenu.Controls.Add(this.pnSubQuanLy);
-            this.pnSideMenu.Controls.Add(this.panel3);
+            this.pnSideMenu.Controls.Add(this.pnQuanLy);
             this.pnSideMenu.Controls.Add(this.pnSubHangHoa);
             this.pnSideMenu.Controls.Add(this.pnHangHoa);
             this.pnSideMenu.Controls.Add(this.pnTrangChu);
@@ -115,75 +113,15 @@
             this.pnLBKhachHang.TabIndex = 13;
             this.pnLBKhachHang.Visible = false;
             // 
-            // btnKhachHang
+            // pnQuanLy
             // 
-            this.btnKhachHang.BackColor = System.Drawing.Color.White;
-            this.btnKhachHang.BackgroundColor = System.Drawing.Color.White;
-            this.btnKhachHang.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnKhachHang.BorderRadius = 0;
-            this.btnKhachHang.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(3, 54);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnKhachHang.Size = new System.Drawing.Size(197, 45);
-            this.btnKhachHang.TabIndex = 10;
-            this.btnKhachHang.Text = "      Khách hàng";
-            this.btnKhachHang.TextColor = System.Drawing.Color.Black;
-            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhachHang.UseVisualStyleBackColor = false;
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.White;
-            this.btnNhanVien.BackgroundColor = System.Drawing.Color.White;
-            this.btnNhanVien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnNhanVien.BorderRadius = 0;
-            this.btnNhanVien.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(3, 0);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnNhanVien.Size = new System.Drawing.Size(197, 45);
-            this.btnNhanVien.TabIndex = 9;
-            this.btnNhanVien.Text = "      Nhân viên";
-            this.btnNhanVien.TextColor = System.Drawing.Color.Black;
-            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhanVien.UseVisualStyleBackColor = false;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.btnQuanLy);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 474);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 55);
-            this.panel3.TabIndex = 8;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.panel7.Controls.Add(this.pnLBQuanLy);
-            this.panel7.Location = new System.Drawing.Point(0, 5);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 45);
-            this.panel7.TabIndex = 12;
-            this.panel7.Visible = false;
+            this.pnQuanLy.Controls.Add(this.pnLBQuanLy);
+            this.pnQuanLy.Controls.Add(this.btnQuanLy);
+            this.pnQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnQuanLy.Location = new System.Drawing.Point(0, 474);
+            this.pnQuanLy.Name = "pnQuanLy";
+            this.pnQuanLy.Size = new System.Drawing.Size(200, 55);
+            this.pnQuanLy.TabIndex = 8;
             // 
             // pnLBQuanLy
             // 
@@ -193,31 +131,6 @@
             this.pnLBQuanLy.Size = new System.Drawing.Size(8, 45);
             this.pnLBQuanLy.TabIndex = 13;
             this.pnLBQuanLy.Visible = false;
-            // 
-            // btnQuanLy
-            // 
-            this.btnQuanLy.BackColor = System.Drawing.Color.White;
-            this.btnQuanLy.BackgroundColor = System.Drawing.Color.White;
-            this.btnQuanLy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnQuanLy.BorderRadius = 0;
-            this.btnQuanLy.BorderSize = 0;
-            this.btnQuanLy.FlatAppearance.BorderSize = 0;
-            this.btnQuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
-            this.btnQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLy.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLy.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLy.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLy.Image")));
-            this.btnQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLy.Location = new System.Drawing.Point(0, 5);
-            this.btnQuanLy.Name = "btnQuanLy";
-            this.btnQuanLy.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnQuanLy.Size = new System.Drawing.Size(200, 45);
-            this.btnQuanLy.TabIndex = 6;
-            this.btnQuanLy.Text = "      Quản lý";
-            this.btnQuanLy.TextColor = System.Drawing.Color.Black;
-            this.btnQuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLy.UseVisualStyleBackColor = false;
-            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // pnSubHangHoa
             // 
@@ -270,6 +183,136 @@
             this.pnLBBanHang.Size = new System.Drawing.Size(8, 45);
             this.pnLBBanHang.TabIndex = 11;
             this.pnLBBanHang.Visible = false;
+            // 
+            // pnHangHoa
+            // 
+            this.pnHangHoa.Controls.Add(this.pnLBHangHoa);
+            this.pnHangHoa.Controls.Add(this.btnHangHoa);
+            this.pnHangHoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnHangHoa.Location = new System.Drawing.Point(0, 198);
+            this.pnHangHoa.Name = "pnHangHoa";
+            this.pnHangHoa.Size = new System.Drawing.Size(200, 55);
+            this.pnHangHoa.TabIndex = 6;
+            // 
+            // pnLBHangHoa
+            // 
+            this.pnLBHangHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.pnLBHangHoa.Location = new System.Drawing.Point(0, 5);
+            this.pnLBHangHoa.Name = "pnLBHangHoa";
+            this.pnLBHangHoa.Size = new System.Drawing.Size(8, 45);
+            this.pnLBHangHoa.TabIndex = 10;
+            this.pnLBHangHoa.Visible = false;
+            // 
+            // pnTrangChu
+            // 
+            this.pnTrangChu.Controls.Add(this.pnLBTrangChu);
+            this.pnTrangChu.Controls.Add(this.btnTrangChu);
+            this.pnTrangChu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTrangChu.Location = new System.Drawing.Point(0, 143);
+            this.pnTrangChu.Name = "pnTrangChu";
+            this.pnTrangChu.Size = new System.Drawing.Size(200, 55);
+            this.pnTrangChu.TabIndex = 7;
+            // 
+            // pnLBTrangChu
+            // 
+            this.pnLBTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.pnLBTrangChu.Location = new System.Drawing.Point(0, 5);
+            this.pnLBTrangChu.Name = "pnLBTrangChu";
+            this.pnLBTrangChu.Size = new System.Drawing.Size(8, 45);
+            this.pnLBTrangChu.TabIndex = 9;
+            this.pnLBTrangChu.Visible = false;
+            // 
+            // pnImage
+            // 
+            this.pnImage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnImage.Location = new System.Drawing.Point(0, 0);
+            this.pnImage.Name = "pnImage";
+            this.pnImage.Size = new System.Drawing.Size(200, 143);
+            this.pnImage.TabIndex = 0;
+            // 
+            // pnChucNang
+            // 
+            this.pnChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.pnChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnChucNang.Location = new System.Drawing.Point(200, 40);
+            this.pnChucNang.Name = "pnChucNang";
+            this.pnChucNang.Size = new System.Drawing.Size(1150, 760);
+            this.pnChucNang.TabIndex = 2;
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.BackColor = System.Drawing.Color.White;
+            this.btnKhachHang.BackgroundColor = System.Drawing.Color.White;
+            this.btnKhachHang.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKhachHang.BorderRadius = 0;
+            this.btnKhachHang.BorderSize = 0;
+            this.btnKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(3, 54);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnKhachHang.Size = new System.Drawing.Size(197, 45);
+            this.btnKhachHang.TabIndex = 10;
+            this.btnKhachHang.Text = "      Khách hàng";
+            this.btnKhachHang.TextColor = System.Drawing.Color.Black;
+            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BackColor = System.Drawing.Color.White;
+            this.btnNhanVien.BackgroundColor = System.Drawing.Color.White;
+            this.btnNhanVien.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNhanVien.BorderRadius = 0;
+            this.btnNhanVien.BorderSize = 0;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(3, 0);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnNhanVien.Size = new System.Drawing.Size(197, 45);
+            this.btnNhanVien.TabIndex = 9;
+            this.btnNhanVien.Text = "      Nhân viên";
+            this.btnNhanVien.TextColor = System.Drawing.Color.Black;
+            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // btnQuanLy
+            // 
+            this.btnQuanLy.BackColor = System.Drawing.Color.White;
+            this.btnQuanLy.BackgroundColor = System.Drawing.Color.White;
+            this.btnQuanLy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuanLy.BorderRadius = 0;
+            this.btnQuanLy.BorderSize = 0;
+            this.btnQuanLy.FlatAppearance.BorderSize = 0;
+            this.btnQuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(201)))));
+            this.btnQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLy.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLy.ForeColor = System.Drawing.Color.Black;
+            this.btnQuanLy.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLy.Image")));
+            this.btnQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLy.Location = new System.Drawing.Point(0, 5);
+            this.btnQuanLy.Name = "btnQuanLy";
+            this.btnQuanLy.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnQuanLy.Size = new System.Drawing.Size(200, 45);
+            this.btnQuanLy.TabIndex = 6;
+            this.btnQuanLy.Text = "      Quản lý";
+            this.btnQuanLy.TextColor = System.Drawing.Color.Black;
+            this.btnQuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLy.UseVisualStyleBackColor = false;
+            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // btnPhieuNhap
             // 
@@ -371,25 +414,6 @@
             this.btnBanHang.UseVisualStyleBackColor = false;
             this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
-            // pnHangHoa
-            // 
-            this.pnHangHoa.Controls.Add(this.pnLBHangHoa);
-            this.pnHangHoa.Controls.Add(this.btnHangHoa);
-            this.pnHangHoa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHangHoa.Location = new System.Drawing.Point(0, 198);
-            this.pnHangHoa.Name = "pnHangHoa";
-            this.pnHangHoa.Size = new System.Drawing.Size(200, 55);
-            this.pnHangHoa.TabIndex = 6;
-            // 
-            // pnLBHangHoa
-            // 
-            this.pnLBHangHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.pnLBHangHoa.Location = new System.Drawing.Point(0, 5);
-            this.pnLBHangHoa.Name = "pnLBHangHoa";
-            this.pnLBHangHoa.Size = new System.Drawing.Size(8, 45);
-            this.pnLBHangHoa.TabIndex = 10;
-            this.pnLBHangHoa.Visible = false;
-            // 
             // btnHangHoa
             // 
             this.btnHangHoa.BackColor = System.Drawing.Color.White;
@@ -415,25 +439,6 @@
             this.btnHangHoa.UseVisualStyleBackColor = false;
             this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
             // 
-            // pnTrangChu
-            // 
-            this.pnTrangChu.Controls.Add(this.pnLBTrangChu);
-            this.pnTrangChu.Controls.Add(this.btnTrangChu);
-            this.pnTrangChu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTrangChu.Location = new System.Drawing.Point(0, 143);
-            this.pnTrangChu.Name = "pnTrangChu";
-            this.pnTrangChu.Size = new System.Drawing.Size(200, 55);
-            this.pnTrangChu.TabIndex = 7;
-            // 
-            // pnLBTrangChu
-            // 
-            this.pnLBTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.pnLBTrangChu.Location = new System.Drawing.Point(0, 5);
-            this.pnLBTrangChu.Name = "pnLBTrangChu";
-            this.pnLBTrangChu.Size = new System.Drawing.Size(8, 45);
-            this.pnLBTrangChu.TabIndex = 9;
-            this.pnLBTrangChu.Visible = false;
-            // 
             // btnTrangChu
             // 
             this.btnTrangChu.BackColor = System.Drawing.Color.White;
@@ -458,14 +463,6 @@
             this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTrangChu.UseVisualStyleBackColor = false;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
-            // 
-            // pnImage
-            // 
-            this.pnImage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnImage.Location = new System.Drawing.Point(0, 0);
-            this.pnImage.Name = "pnImage";
-            this.pnImage.Size = new System.Drawing.Size(200, 143);
-            this.pnImage.TabIndex = 0;
             // 
             // gradientPanel1
             // 
@@ -523,15 +520,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pnChucNang
-            // 
-            this.pnChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.pnChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnChucNang.Location = new System.Drawing.Point(200, 40);
-            this.pnChucNang.Name = "pnChucNang";
-            this.pnChucNang.Size = new System.Drawing.Size(1150, 760);
-            this.pnChucNang.TabIndex = 2;
-            // 
             // GiaoDien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,8 +536,7 @@
             this.Text = "Form1";
             this.pnSideMenu.ResumeLayout(false);
             this.pnSubQuanLy.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.pnQuanLy.ResumeLayout(false);
             this.pnSubHangHoa.ResumeLayout(false);
             this.pnHangHoa.ResumeLayout(false);
             this.pnTrangChu.ResumeLayout(false);
@@ -575,14 +562,13 @@
         private MyCustom.CustomButton btnHangHoa;
         private System.Windows.Forms.Panel pnTrangChu;
         private MyCustom.CustomButton btnTrangChu;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnQuanLy;
         private MyCustom.CustomButton btnQuanLy;
         private System.Windows.Forms.Panel pnLBTrangChu;
         private System.Windows.Forms.Panel pnLBHangHoa;
         private System.Windows.Forms.Panel pnLBBanHang;
         private System.Windows.Forms.Panel pnLBNhanVien;
         private System.Windows.Forms.Panel pnLBKhachHang;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnLBQuanLy;
         private System.Windows.Forms.Panel pnLBPhieuNhap;
         private System.Windows.Forms.Panel pnLBNhapHang;
