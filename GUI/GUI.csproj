@@ -241,6 +241,9 @@
     <Compile Include="MyCustom\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MyCustom\CustomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="MyCustom\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -250,7 +253,9 @@
     <Compile Include="MyCustom\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MyCustom\RJRadioButton.cs" />
+    <Compile Include="MyCustom\RJRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MyCustom\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

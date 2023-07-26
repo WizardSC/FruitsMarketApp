@@ -25,7 +25,7 @@ namespace GUI
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = nvBLL.getListHocSinh();
-            
+            dgvNhanVien.EnableHeadersVisualStyles = false;
             
             if (dgvNhanVien != null)
             {
