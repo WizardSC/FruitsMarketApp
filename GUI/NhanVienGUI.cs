@@ -7,19 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
+using BLL;
 namespace GUI
 {
-    public partial class NhanVien : Form
+    public partial class NhanVienGUI : Form
     {
-        public NhanVien()
+        private NhanVienBLL nvBLL;
+
+
+        public NhanVienGUI()
         {
             InitializeComponent();
+            nvBLL = new NhanVienBLL();
         }
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-
+            dgvNhanVien.DataSource = nvBLL.getListHocSinh();
+            
+            
+            if (dgvNhanVien != null)
+            {
+                dgvNhanVien.ClearSelection();
+            }
         }
+        
+
     }
 }

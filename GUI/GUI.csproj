@@ -232,11 +232,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GiaoDien.cs">
+    <Compile Include="GiaoDienGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien.Designer.cs">
-      <DependentUpon>GiaoDien.cs</DependentUpon>
+    <Compile Include="GiaoDienGUI.Designer.cs">
+      <DependentUpon>GiaoDienGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MyCustom\CustomButton.cs">
       <SubType>Component</SubType>
@@ -247,19 +247,30 @@
     <Compile Include="MyCustom\RJCircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="MyCustom\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCustom\RJRadioButton.cs" />
+    <Compile Include="MyCustom\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCustom\RJTextBox.Designer.cs" />
+    <Compile Include="NhanVienGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="NhanVienGUI.Designer.cs">
+      <DependentUpon>NhanVienGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GiaoDien.resx">
-      <DependentUpon>GiaoDien.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDienGUI.resx">
+      <DependentUpon>GiaoDienGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="MyCustom\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienGUI.resx">
+      <DependentUpon>NhanVienGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

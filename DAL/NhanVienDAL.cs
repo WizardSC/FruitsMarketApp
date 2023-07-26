@@ -26,7 +26,7 @@ namespace DAL
                 adt.Fill(dt);
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

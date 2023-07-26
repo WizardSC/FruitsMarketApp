@@ -15,14 +15,15 @@ namespace DTO
         private string gioiTinh;
         private string diaChi;
         private string soDT;
-        private string maCV;
+        
         private string img;
+        private string maCV;
 
         public NhanVienDTO()
         {
         }
 
-        public NhanVienDTO(string maNV, string ho, string ten, DateTime ngaySinh, string gioiTinh, string diaChi, string soDT, string maCV, string img)
+        public NhanVienDTO(string maNV, string ho, string ten, DateTime ngaySinh, string gioiTinh, string diaChi, string soDT, string img, string maCV)
         {
             this.maNV = maNV;
             this.ho = ho;
@@ -31,8 +32,8 @@ namespace DTO
             this.gioiTinh = gioiTinh;
             this.diaChi = diaChi;
             this.soDT = soDT;
-            this.maCV = maCV;
             this.img = img;
+            this.maCV = maCV;
         }
 
         public string MaNV { get => maNV; set => maNV = value; }

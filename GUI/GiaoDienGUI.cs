@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class GiaoDien : Form
+    public partial class GiaoDienGUI : Form
     {
-        public GiaoDien()
+        public GiaoDienGUI()
         {
             InitializeComponent();
             customizeDesign();
@@ -113,7 +113,7 @@ namespace GUI
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             hidePnLB(pnLBNhanVien);
-            openChildForm(new NhanVien());
+            openChildForm(new NhanVienGUI());
         }
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
