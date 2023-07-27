@@ -32,7 +32,20 @@ namespace GUI
                 dgvNhanVien.ClearSelection();
             }
         }
-        
 
+        private void rjTextBox7__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjTextBox4__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjRadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
