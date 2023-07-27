@@ -93,6 +93,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_close_32", resourceCulture);
@@ -133,6 +143,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_garbage_23 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-garbage-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8_home_35", resourceCulture);
@@ -146,6 +166,36 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_minimize_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_minimize_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pencil_23 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pencil-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reset_23 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reset-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reset_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reset-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

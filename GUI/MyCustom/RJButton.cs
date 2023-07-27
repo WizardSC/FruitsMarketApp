@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GUI.MyCustom
 {
-    public class CustomButton : Button
+    public class RJButton : Button
     {
         //Fields
         private int borderSize = 0;
@@ -62,7 +62,7 @@ namespace GUI.MyCustom
         }
 
         //Constructor
-        public CustomButton()
+        public RJButton()
         {
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;

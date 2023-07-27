@@ -238,7 +238,7 @@
     <Compile Include="GiaoDienGUI.Designer.cs">
       <DependentUpon>GiaoDienGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyCustom\CustomButton.cs">
+    <Compile Include="MyCustom\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MyCustom\CustomPanel.cs">
@@ -271,6 +271,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="resources\image\icons8-reset-23.png" />
+    <None Include="resources\image\icons8-reset-32.png" />
+    <None Include="resources\image\icons8-pencil-23.png" />
+    <None Include="resources\image\icons8-garbage-23.png" />
+    <None Include="resources\image\icons8-garbage-26.png" />
+    <None Include="resources\image\icons8-garbage-32.png" />
+    <None Include="resources\image\icons8-pencil-32.png" />
+    <None Include="resources\image\icons8-add-32.png" />
     <None Include="resources\image\placeholder-image.png" />
     <None Include="resources\image\icons8-tool-35.png" />
     <None Include="resources\image\icons8-minimize-32.png" />

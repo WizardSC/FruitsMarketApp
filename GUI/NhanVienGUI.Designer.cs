@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
@@ -66,9 +62,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.btnUpdate = new GUI.MyCustom.RJButton();
+            this.btnDelete = new GUI.MyCustom.RJButton();
+            this.btnReset = new GUI.MyCustom.RJButton();
+            this.btnAdd = new GUI.MyCustom.RJButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvNhanVien
@@ -81,14 +84,14 @@
             this.dgvNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhanVien.ColumnHeadersHeight = 35;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -101,14 +104,14 @@
             this.SoDT,
             this.Column7,
             this.IMG});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvNhanVien.Location = new System.Drawing.Point(306, 52);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
@@ -116,9 +119,9 @@
             this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
@@ -256,64 +259,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 514);
+            this.label7.Location = new System.Drawing.Point(34, 504);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 17);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Họ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 572);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 17);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Họ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 627);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 17);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Họ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox1.Image = global::GUI.Properties.Resources.placeholder_image;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // rjTextBox8
-            // 
-            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.Black;
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjTextBox8.BorderRadius = 0;
-            this.rjTextBox8.BorderSize = 2;
-            this.rjTextBox8.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox8.Location = new System.Drawing.Point(85, 566);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = true;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox8.PlaceholderText = "";
-            this.rjTextBox8.Size = new System.Drawing.Size(198, 27);
-            this.rjTextBox8.TabIndex = 23;
-            this.rjTextBox8.Texts = "";
-            this.rjTextBox8.UnderlinedStyle = false;
+            this.label7.Text = "Số ĐT";
             // 
             // rjTextBox3
             // 
@@ -321,7 +271,7 @@
             this.rjTextBox3.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.BorderSize = 1;
             this.rjTextBox3.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox3.Location = new System.Drawing.Point(96, 306);
@@ -343,7 +293,7 @@
             this.rjTextBox2.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.BorderSize = 1;
             this.rjTextBox2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox2.Location = new System.Drawing.Point(96, 258);
@@ -366,7 +316,7 @@
             this.rjTextBox1.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.BorderSize = 1;
             this.rjTextBox1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox1.Location = new System.Drawing.Point(96, 210);
@@ -391,7 +341,7 @@
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Location = new System.Drawing.Point(11, 12);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(275, 39);
+            this.gradientPanel1.Size = new System.Drawing.Size(280, 39);
             this.gradientPanel1.TabIndex = 2;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
             // 
@@ -401,7 +351,7 @@
             this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 39);
+            this.label1.Size = new System.Drawing.Size(280, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -478,7 +428,7 @@
             // rjDatePicker1
             // 
             this.rjDatePicker1.BorderColor = System.Drawing.Color.Black;
-            this.rjDatePicker1.BorderSize = 2;
+            this.rjDatePicker1.BorderSize = 1;
             this.rjDatePicker1.CalendarFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjDatePicker1.CalendarForeColor = System.Drawing.Color.Black;
             this.rjDatePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -486,7 +436,7 @@
             this.rjDatePicker1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.rjDatePicker1.Location = new System.Drawing.Point(96, 354);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(0, 27);
+            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 27);
             this.rjDatePicker1.Name = "rjDatePicker1";
             this.rjDatePicker1.Size = new System.Drawing.Size(187, 27);
             this.rjDatePicker1.SkinColor = System.Drawing.Color.Transparent;
@@ -506,7 +456,7 @@
             // rjRadioButton3
             // 
             this.rjRadioButton3.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjRadioButton3.Location = new System.Drawing.Point(194, 399);
+            this.rjRadioButton3.Location = new System.Drawing.Point(194, 402);
             this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
             this.rjRadioButton3.Name = "rjRadioButton3";
             this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -535,7 +485,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 459);
+            this.label6.Location = new System.Drawing.Point(26, 459);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 19);
             this.label6.TabIndex = 28;
@@ -548,7 +498,7 @@
             this.rjTextBox4.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox4.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.BorderSize = 1;
             this.rjTextBox4.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox4.Location = new System.Drawing.Point(96, 453);
@@ -571,7 +521,7 @@
             this.rjTextBox5.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox5.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rjTextBox5.BorderRadius = 0;
-            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.BorderSize = 1;
             this.rjTextBox5.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox5.Location = new System.Drawing.Point(96, 504);
@@ -587,12 +537,143 @@
             this.rjTextBox5.Texts = "";
             this.rjTextBox5.UnderlinedStyle = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(32, 555);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 17);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Mã CV";
+            // 
+            // rjTextBox6
+            // 
+            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox6.BorderColor = System.Drawing.Color.Black;
+            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rjTextBox6.BorderRadius = 0;
+            this.rjTextBox6.BorderSize = 1;
+            this.rjTextBox6.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox6.Location = new System.Drawing.Point(96, 555);
+            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox6.Multiline = true;
+            this.rjTextBox6.Name = "rjTextBox6";
+            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox6.PasswordChar = false;
+            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox6.PlaceholderText = "";
+            this.rjTextBox6.Size = new System.Drawing.Size(153, 27);
+            this.rjTextBox6.TabIndex = 32;
+            this.rjTextBox6.Texts = "";
+            this.rjTextBox6.UnderlinedStyle = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnUpdate.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdate.BorderRadius = 20;
+            this.btnUpdate.BorderSize = 2;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::GUI.Properties.Resources.icons8_pencil_23;
+            this.btnUpdate.Location = new System.Drawing.Point(100, 619);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(40, 40);
+            this.btnUpdate.TabIndex = 36;
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.BorderRadius = 20;
+            this.btnDelete.BorderSize = 2;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::GUI.Properties.Resources.icons8_garbage_23;
+            this.btnDelete.Location = new System.Drawing.Point(171, 619);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(40, 40);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnReset.BorderColor = System.Drawing.Color.Black;
+            this.btnReset.BorderRadius = 20;
+            this.btnReset.BorderSize = 2;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::GUI.Properties.Resources.icons8_reset_23;
+            this.btnReset.Location = new System.Drawing.Point(242, 619);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(40, 40);
+            this.btnReset.TabIndex = 34;
+            this.btnReset.TextColor = System.Drawing.Color.White;
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.BorderRadius = 20;
+            this.btnAdd.BorderSize = 2;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::GUI.Properties.Resources.icons8_add_32;
+            this.btnAdd.Location = new System.Drawing.Point(29, 619);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 40);
+            this.btnAdd.TabIndex = 33;
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.placeholder_image;
+            this.pictureBox1.Location = new System.Drawing.Point(74, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // NhanVienGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1150, 720);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.rjTextBox6);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.rjTextBox5);
             this.Controls.Add(this.rjTextBox4);
             this.Controls.Add(this.label6);
@@ -600,9 +681,6 @@
             this.Controls.Add(this.rjRadioButton4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.rjDatePicker1);
-            this.Controls.Add(this.rjTextBox8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rjTextBox3);
@@ -623,8 +701,8 @@
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -656,9 +734,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox rjTextBox8;
-        private System.Windows.Forms.Label label9;
         private CustomControls.RJControls.RJDatePicker rjDatePicker1;
         private System.Windows.Forms.Label label10;
         private CustomControls.RJControls.RJRadioButton rjRadioButton3;
@@ -666,5 +741,11 @@
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.RJTextBox rjTextBox4;
         private CustomControls.RJControls.RJTextBox rjTextBox5;
+        private System.Windows.Forms.Label label8;
+        private CustomControls.RJControls.RJTextBox rjTextBox6;
+        private MyCustom.RJButton btnAdd;
+        private MyCustom.RJButton btnReset;
+        private MyCustom.RJButton btnDelete;
+        private MyCustom.RJButton btnUpdate;
     }
 }

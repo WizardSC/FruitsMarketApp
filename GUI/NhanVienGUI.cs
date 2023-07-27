@@ -31,6 +31,9 @@ namespace GUI
             {
                 dgvNhanVien.ClearSelection();
             }
+
+            btnUpdate.BackColor = Color.LightGray;
+            btnDelete.BackColor = Color.LightGray;
         }
 
         private void rjTextBox7__TextChanged(object sender, EventArgs e)
