@@ -61,10 +61,8 @@
             this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
             this.rjRadioButton1 = new CustomControls.RJControls.RJRadioButton();
             this.rjRadioButton2 = new CustomControls.RJControls.RJRadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.warningMaNV = new System.Windows.Forms.Label();
             this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTest = new System.Windows.Forms.TextBox();
             this.rjButton1 = new GUI.MyCustom.RJButton();
             this.txtMaCV = new CustomControls.RJControls.RJTextBox();
             this.txtSoDT = new CustomControls.RJControls.RJTextBox();
@@ -77,6 +75,13 @@
             this.txtMaNV = new CustomControls.RJControls.RJTextBox();
             this.pnLabelThongTin = new GUI.MyCustom.GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.warningHo = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnThanhTimKiem.SuspendLayout();
@@ -238,7 +243,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 266);
+            this.label3.Location = new System.Drawing.Point(26, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 8;
@@ -259,7 +264,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 368);
+            this.label5.Location = new System.Drawing.Point(8, 370);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 14;
@@ -269,7 +274,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 504);
+            this.label7.Location = new System.Drawing.Point(28, 519);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 18;
@@ -279,7 +284,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(14, 412);
+            this.label10.Location = new System.Drawing.Point(14, 423);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 17);
             this.label10.TabIndex = 25;
@@ -288,7 +293,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 459);
+            this.label6.Location = new System.Drawing.Point(26, 467);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 19);
             this.label6.TabIndex = 28;
@@ -299,7 +304,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(32, 555);
+            this.label8.Location = new System.Drawing.Point(26, 571);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 31;
@@ -335,7 +340,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = global::GUI.Properties.Resources.icons8_pencil_23;
-            this.btnSua.Location = new System.Drawing.Point(100, 619);
+            this.btnSua.Location = new System.Drawing.Point(100, 642);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(40, 40);
             this.btnSua.TabIndex = 36;
@@ -358,7 +363,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = global::GUI.Properties.Resources.icons8_garbage_23;
-            this.btnXoa.Location = new System.Drawing.Point(171, 619);
+            this.btnXoa.Location = new System.Drawing.Point(171, 642);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(40, 40);
             this.btnXoa.TabIndex = 35;
@@ -380,7 +385,7 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Image = global::GUI.Properties.Resources.icons8_reset_23;
-            this.btnReset.Location = new System.Drawing.Point(242, 619);
+            this.btnReset.Location = new System.Drawing.Point(242, 642);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(40, 40);
             this.btnReset.TabIndex = 34;
@@ -403,13 +408,14 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = global::GUI.Properties.Resources.icons8_add_32;
-            this.btnThem.Location = new System.Drawing.Point(29, 619);
+            this.btnThem.Location = new System.Drawing.Point(29, 642);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(40, 40);
             this.btnThem.TabIndex = 33;
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.ttChucNang.SetToolTip(this.btnThem, "Thêm");
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // pnThanhTimKiem
             // 
@@ -491,36 +497,22 @@
             this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
             this.rjRadioButton2.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // warningMaNV
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(84, 242);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(198, 15);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "*Bạn phải điền đầy đủ thông tin";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(84, 294);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 15);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "*Bạn phải điền đầy đủ thông tin";
+            this.warningMaNV.AutoSize = true;
+            this.warningMaNV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningMaNV.ForeColor = System.Drawing.Color.Red;
+            this.warningMaNV.Location = new System.Drawing.Point(84, 242);
+            this.warningMaNV.Name = "warningMaNV";
+            this.warningMaNV.Size = new System.Drawing.Size(198, 15);
+            this.warningMaNV.TabIndex = 39;
+            this.warningMaNV.Text = "*Bạn phải điền đầy đủ thông tin";
+            this.warningMaNV.Visible = false;
             // 
             // errThongTin
             // 
+            this.errThongTin.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errThongTin.ContainerControl = this;
-            // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(182, 688);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(100, 20);
-            this.txtTest.TabIndex = 41;
             // 
             // rjButton1
             // 
@@ -536,7 +528,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(252, 555);
+            this.rjButton1.Location = new System.Drawing.Point(253, 571);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(30, 29);
             this.rjButton1.TabIndex = 37;
@@ -553,7 +545,7 @@
             this.txtMaCV.BorderSize = 1;
             this.txtMaCV.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaCV.Location = new System.Drawing.Point(96, 555);
+            this.txtMaCV.Location = new System.Drawing.Point(95, 571);
             this.txtMaCV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaCV.Multiline = true;
             this.txtMaCV.Name = "txtMaCV";
@@ -575,7 +567,7 @@
             this.txtSoDT.BorderSize = 1;
             this.txtSoDT.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSoDT.Location = new System.Drawing.Point(96, 504);
+            this.txtSoDT.Location = new System.Drawing.Point(92, 519);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Multiline = true;
             this.txtSoDT.Name = "txtSoDT";
@@ -597,7 +589,7 @@
             this.txtDiaChi.BorderSize = 1;
             this.txtDiaChi.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(96, 453);
+            this.txtDiaChi.Location = new System.Drawing.Point(95, 467);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -615,7 +607,7 @@
             // 
             this.rdbGioiTinhNu.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rdbGioiTinhNu.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbGioiTinhNu.Location = new System.Drawing.Point(194, 402);
+            this.rdbGioiTinhNu.Location = new System.Drawing.Point(194, 416);
             this.rdbGioiTinhNu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbGioiTinhNu.Name = "rdbGioiTinhNu";
             this.rdbGioiTinhNu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -630,7 +622,7 @@
             // 
             this.rdbGioiTinhNam.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rdbGioiTinhNam.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbGioiTinhNam.Location = new System.Drawing.Point(121, 402);
+            this.rdbGioiTinhNam.Location = new System.Drawing.Point(121, 416);
             this.rdbGioiTinhNam.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbGioiTinhNam.Name = "rdbGioiTinhNam";
             this.rdbGioiTinhNam.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -652,7 +644,7 @@
             this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtpNgaySinh.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(96, 362);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(95, 364);
             this.dtpNgaySinh.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(187, 29);
@@ -752,15 +744,104 @@
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // warningHo
+            // 
+            this.warningHo.AutoSize = true;
+            this.warningHo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningHo.ForeColor = System.Drawing.Color.Red;
+            this.warningHo.Location = new System.Drawing.Point(85, 294);
+            this.warningHo.Name = "warningHo";
+            this.warningHo.Size = new System.Drawing.Size(118, 15);
+            this.warningHo.TabIndex = 42;
+            this.warningHo.Text = "*Bạn phải nhập họ";
+            this.warningHo.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(84, 346);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 15);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "*Bạn phải nhập tên";
+            this.label9.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(89, 398);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(157, 15);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "*Bạn phải điền ngày sinh";
+            this.label11.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(93, 448);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(157, 15);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "*Bạn phải điền ngày sinh";
+            this.label12.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(93, 500);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(157, 15);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "*Bạn phải điền ngày sinh";
+            this.label13.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(89, 552);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(157, 15);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "*Bạn phải điền ngày sinh";
+            this.label14.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(92, 604);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(157, 15);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "*Bạn phải điền ngày sinh";
+            this.label15.Visible = false;
+            // 
             // NhanVienGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1150, 720);
-            this.Controls.Add(this.txtTest);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.warningHo);
+            this.Controls.Add(this.warningMaNV);
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.btnSua);
@@ -842,10 +923,15 @@
         private MyCustom.RJButton rjButton1;
         private System.Windows.Forms.ToolTip ttChucNang;
         private System.Windows.Forms.Panel pnThanhTimKiem;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label warningMaNV;
         private System.Windows.Forms.ErrorProvider errThongTin;
         private CustomControls.RJControls.RJTextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtTest;
+        private System.Windows.Forms.Label warningHo;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
