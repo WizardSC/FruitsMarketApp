@@ -52,18 +52,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ttChucNang = new System.Windows.Forms.ToolTip(this.components);
+            this.pnThanhTimKiem = new System.Windows.Forms.Panel();
+            this.warningMaNV = new System.Windows.Forms.Label();
+            this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.warningHo = new System.Windows.Forms.Label();
+            this.warningTen = new System.Windows.Forms.Label();
+            this.warningNgaySinh = new System.Windows.Forms.Label();
+            this.warningGioiTinh = new System.Windows.Forms.Label();
+            this.warningDiaChi = new System.Windows.Forms.Label();
+            this.warningSoDT = new System.Windows.Forms.Label();
+            this.warningMaCV = new System.Windows.Forms.Label();
+            this.btnChonChucVu = new GUI.MyCustom.RJButton();
             this.btnSua = new GUI.MyCustom.RJButton();
             this.btnXoa = new GUI.MyCustom.RJButton();
             this.btnReset = new GUI.MyCustom.RJButton();
             this.btnThem = new GUI.MyCustom.RJButton();
-            this.pnThanhTimKiem = new System.Windows.Forms.Panel();
-            this.txtTimKiem = new CustomControls.RJControls.RJTextBox();
-            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
-            this.rjRadioButton1 = new CustomControls.RJControls.RJRadioButton();
-            this.rjRadioButton2 = new CustomControls.RJControls.RJRadioButton();
-            this.warningMaNV = new System.Windows.Forms.Label();
-            this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
-            this.rjButton1 = new GUI.MyCustom.RJButton();
             this.txtMaCV = new CustomControls.RJControls.RJTextBox();
             this.txtSoDT = new CustomControls.RJControls.RJTextBox();
             this.txtDiaChi = new CustomControls.RJControls.RJTextBox();
@@ -75,13 +78,10 @@
             this.txtMaNV = new CustomControls.RJControls.RJTextBox();
             this.pnLabelThongTin = new GUI.MyCustom.GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.warningHo = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new CustomControls.RJControls.RJTextBox();
+            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
+            this.rjRadioButton1 = new CustomControls.RJControls.RJRadioButton();
+            this.rjRadioButton2 = new CustomControls.RJControls.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnThanhTimKiem.SuspendLayout();
@@ -325,6 +325,140 @@
             // 
             this.ttChucNang.ShowAlways = true;
             // 
+            // pnThanhTimKiem
+            // 
+            this.pnThanhTimKiem.Controls.Add(this.txtTimKiem);
+            this.pnThanhTimKiem.Controls.Add(this.rjComboBox1);
+            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton1);
+            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton2);
+            this.pnThanhTimKiem.Location = new System.Drawing.Point(306, 3);
+            this.pnThanhTimKiem.Name = "pnThanhTimKiem";
+            this.pnThanhTimKiem.Size = new System.Drawing.Size(832, 43);
+            this.pnThanhTimKiem.TabIndex = 38;
+            // 
+            // warningMaNV
+            // 
+            this.warningMaNV.AutoSize = true;
+            this.warningMaNV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningMaNV.ForeColor = System.Drawing.Color.Red;
+            this.warningMaNV.Location = new System.Drawing.Point(84, 242);
+            this.warningMaNV.Name = "warningMaNV";
+            this.warningMaNV.Size = new System.Drawing.Size(181, 15);
+            this.warningMaNV.TabIndex = 39;
+            this.warningMaNV.Text = "*Bạn phải điền mã nhân viên";
+            this.warningMaNV.Visible = false;
+            // 
+            // errThongTin
+            // 
+            this.errThongTin.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errThongTin.ContainerControl = this;
+            // 
+            // warningHo
+            // 
+            this.warningHo.AutoSize = true;
+            this.warningHo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningHo.ForeColor = System.Drawing.Color.Red;
+            this.warningHo.Location = new System.Drawing.Point(84, 294);
+            this.warningHo.Name = "warningHo";
+            this.warningHo.Size = new System.Drawing.Size(118, 15);
+            this.warningHo.TabIndex = 42;
+            this.warningHo.Text = "*Bạn phải nhập họ";
+            this.warningHo.Visible = false;
+            // 
+            // warningTen
+            // 
+            this.warningTen.AutoSize = true;
+            this.warningTen.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningTen.ForeColor = System.Drawing.Color.Red;
+            this.warningTen.Location = new System.Drawing.Point(84, 346);
+            this.warningTen.Name = "warningTen";
+            this.warningTen.Size = new System.Drawing.Size(123, 15);
+            this.warningTen.TabIndex = 43;
+            this.warningTen.Text = "*Bạn phải nhập tên";
+            this.warningTen.Visible = false;
+            // 
+            // warningNgaySinh
+            // 
+            this.warningNgaySinh.AutoSize = true;
+            this.warningNgaySinh.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningNgaySinh.ForeColor = System.Drawing.Color.Red;
+            this.warningNgaySinh.Location = new System.Drawing.Point(84, 398);
+            this.warningNgaySinh.Name = "warningNgaySinh";
+            this.warningNgaySinh.Size = new System.Drawing.Size(157, 15);
+            this.warningNgaySinh.TabIndex = 44;
+            this.warningNgaySinh.Text = "*Bạn phải điền ngày sinh";
+            this.warningNgaySinh.Visible = false;
+            // 
+            // warningGioiTinh
+            // 
+            this.warningGioiTinh.AutoSize = true;
+            this.warningGioiTinh.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningGioiTinh.ForeColor = System.Drawing.Color.Red;
+            this.warningGioiTinh.Location = new System.Drawing.Point(84, 448);
+            this.warningGioiTinh.Name = "warningGioiTinh";
+            this.warningGioiTinh.Size = new System.Drawing.Size(153, 15);
+            this.warningGioiTinh.TabIndex = 45;
+            this.warningGioiTinh.Text = "*Bạn phải chọn giới tính";
+            this.warningGioiTinh.Visible = false;
+            // 
+            // warningDiaChi
+            // 
+            this.warningDiaChi.AutoSize = true;
+            this.warningDiaChi.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningDiaChi.ForeColor = System.Drawing.Color.Red;
+            this.warningDiaChi.Location = new System.Drawing.Point(84, 500);
+            this.warningDiaChi.Name = "warningDiaChi";
+            this.warningDiaChi.Size = new System.Drawing.Size(143, 15);
+            this.warningDiaChi.TabIndex = 46;
+            this.warningDiaChi.Text = "*Bạn phải nhập địa chỉ";
+            this.warningDiaChi.Visible = false;
+            // 
+            // warningSoDT
+            // 
+            this.warningSoDT.AutoSize = true;
+            this.warningSoDT.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningSoDT.ForeColor = System.Drawing.Color.Red;
+            this.warningSoDT.Location = new System.Drawing.Point(84, 552);
+            this.warningSoDT.Name = "warningSoDT";
+            this.warningSoDT.Size = new System.Drawing.Size(180, 15);
+            this.warningSoDT.TabIndex = 47;
+            this.warningSoDT.Text = "*Bạn phải nhập số điện thoại";
+            this.warningSoDT.Visible = false;
+            // 
+            // warningMaCV
+            // 
+            this.warningMaCV.AutoSize = true;
+            this.warningMaCV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningMaCV.ForeColor = System.Drawing.Color.Red;
+            this.warningMaCV.Location = new System.Drawing.Point(84, 604);
+            this.warningMaCV.Name = "warningMaCV";
+            this.warningMaCV.Size = new System.Drawing.Size(148, 15);
+            this.warningMaCV.TabIndex = 48;
+            this.warningMaCV.Text = "*Bạn phải chọn chức vụ";
+            this.warningMaCV.Visible = false;
+            // 
+            // btnChonChucVu
+            // 
+            this.btnChonChucVu.BackColor = System.Drawing.Color.Transparent;
+            this.btnChonChucVu.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnChonChucVu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnChonChucVu.BorderRadius = 17;
+            this.btnChonChucVu.BorderSize = 0;
+            this.btnChonChucVu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChonChucVu.FlatAppearance.BorderSize = 0;
+            this.btnChonChucVu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnChonChucVu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnChonChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonChucVu.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChonChucVu.ForeColor = System.Drawing.Color.Black;
+            this.btnChonChucVu.Location = new System.Drawing.Point(252, 571);
+            this.btnChonChucVu.Name = "btnChonChucVu";
+            this.btnChonChucVu.Size = new System.Drawing.Size(30, 29);
+            this.btnChonChucVu.TabIndex = 37;
+            this.btnChonChucVu.Text = "...";
+            this.btnChonChucVu.TextColor = System.Drawing.Color.Black;
+            this.btnChonChucVu.UseVisualStyleBackColor = false;
+            // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
@@ -417,125 +551,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // pnThanhTimKiem
-            // 
-            this.pnThanhTimKiem.Controls.Add(this.txtTimKiem);
-            this.pnThanhTimKiem.Controls.Add(this.rjComboBox1);
-            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton1);
-            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton2);
-            this.pnThanhTimKiem.Location = new System.Drawing.Point(306, 3);
-            this.pnThanhTimKiem.Name = "pnThanhTimKiem";
-            this.pnThanhTimKiem.Size = new System.Drawing.Size(832, 43);
-            this.pnThanhTimKiem.TabIndex = 38;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.txtTimKiem.BorderRadius = 0;
-            this.txtTimKiem.BorderSize = 2;
-            this.txtTimKiem.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(126, 10);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimKiem.Multiline = false;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.txtTimKiem.PasswordChar = false;
-            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTimKiem.PlaceholderText = "Nhập thông tin cần tìm";
-            this.txtTimKiem.Size = new System.Drawing.Size(258, 29);
-            this.txtTimKiem.TabIndex = 3;
-            this.txtTimKiem.Texts = "";
-            this.txtTimKiem.UnderlinedStyle = true;
-            // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.White;
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(9, 9);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(50, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(110, 30);
-            this.rjComboBox1.TabIndex = 4;
-            this.rjComboBox1.Texts = "";
-            // 
-            // rjRadioButton1
-            // 
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjRadioButton1.Location = new System.Drawing.Point(391, 9);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(67, 30);
-            this.rjRadioButton1.TabIndex = 5;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Nam";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = true;
-            // 
-            // rjRadioButton2
-            // 
-            this.rjRadioButton2.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjRadioButton2.Location = new System.Drawing.Point(464, 9);
-            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton2.Name = "rjRadioButton2";
-            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(67, 30);
-            this.rjRadioButton2.TabIndex = 6;
-            this.rjRadioButton2.TabStop = true;
-            this.rjRadioButton2.Text = "Nữ";
-            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton2.UseVisualStyleBackColor = true;
-            // 
-            // warningMaNV
-            // 
-            this.warningMaNV.AutoSize = true;
-            this.warningMaNV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningMaNV.ForeColor = System.Drawing.Color.Red;
-            this.warningMaNV.Location = new System.Drawing.Point(84, 242);
-            this.warningMaNV.Name = "warningMaNV";
-            this.warningMaNV.Size = new System.Drawing.Size(198, 15);
-            this.warningMaNV.TabIndex = 39;
-            this.warningMaNV.Text = "*Bạn phải điền đầy đủ thông tin";
-            this.warningMaNV.Visible = false;
-            // 
-            // errThongTin
-            // 
-            this.errThongTin.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errThongTin.ContainerControl = this;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 17;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(253, 571);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(30, 29);
-            this.rjButton1.TabIndex = 37;
-            this.rjButton1.Text = "...";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
             // txtMaCV
             // 
             this.txtMaCV.BackColor = System.Drawing.SystemColors.Window;
@@ -567,7 +582,7 @@
             this.txtSoDT.BorderSize = 1;
             this.txtSoDT.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSoDT.Location = new System.Drawing.Point(92, 519);
+            this.txtSoDT.Location = new System.Drawing.Point(95, 519);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Multiline = true;
             this.txtSoDT.Name = "txtSoDT";
@@ -744,89 +759,74 @@
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // warningHo
+            // txtTimKiem
             // 
-            this.warningHo.AutoSize = true;
-            this.warningHo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningHo.ForeColor = System.Drawing.Color.Red;
-            this.warningHo.Location = new System.Drawing.Point(85, 294);
-            this.warningHo.Name = "warningHo";
-            this.warningHo.Size = new System.Drawing.Size(118, 15);
-            this.warningHo.TabIndex = 42;
-            this.warningHo.Text = "*Bạn phải nhập họ";
-            this.warningHo.Visible = false;
+            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
+            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.txtTimKiem.BorderRadius = 0;
+            this.txtTimKiem.BorderSize = 2;
+            this.txtTimKiem.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTimKiem.Location = new System.Drawing.Point(126, 10);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Multiline = false;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtTimKiem.PasswordChar = false;
+            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTimKiem.PlaceholderText = "Nhập thông tin cần tìm";
+            this.txtTimKiem.Size = new System.Drawing.Size(258, 29);
+            this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.Texts = "";
+            this.txtTimKiem.UnderlinedStyle = true;
             // 
-            // label9
+            // rjComboBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(84, 346);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 15);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "*Bạn phải nhập tên";
-            this.label9.Visible = false;
+            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rjComboBox1.BorderSize = 1;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjComboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.White;
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(9, 9);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(50, 30);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.rjComboBox1.Size = new System.Drawing.Size(110, 30);
+            this.rjComboBox1.TabIndex = 4;
+            this.rjComboBox1.Texts = "";
             // 
-            // label11
+            // rjRadioButton1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(89, 398);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(157, 15);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "*Bạn phải điền ngày sinh";
-            this.label11.Visible = false;
+            this.rjRadioButton1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rjRadioButton1.Location = new System.Drawing.Point(391, 9);
+            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton1.Name = "rjRadioButton1";
+            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton1.Size = new System.Drawing.Size(67, 30);
+            this.rjRadioButton1.TabIndex = 5;
+            this.rjRadioButton1.TabStop = true;
+            this.rjRadioButton1.Text = "Nam";
+            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton1.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // rjRadioButton2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(93, 448);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(157, 15);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "*Bạn phải điền ngày sinh";
-            this.label12.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(93, 500);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(157, 15);
-            this.label13.TabIndex = 46;
-            this.label13.Text = "*Bạn phải điền ngày sinh";
-            this.label13.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(89, 552);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 15);
-            this.label14.TabIndex = 47;
-            this.label14.Text = "*Bạn phải điền ngày sinh";
-            this.label14.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(92, 604);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(157, 15);
-            this.label15.TabIndex = 48;
-            this.label15.Text = "*Bạn phải điền ngày sinh";
-            this.label15.Visible = false;
+            this.rjRadioButton2.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rjRadioButton2.Location = new System.Drawing.Point(464, 9);
+            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton2.Name = "rjRadioButton2";
+            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton2.Size = new System.Drawing.Size(67, 30);
+            this.rjRadioButton2.TabIndex = 6;
+            this.rjRadioButton2.TabStop = true;
+            this.rjRadioButton2.Text = "Nữ";
+            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton2.UseVisualStyleBackColor = true;
             // 
             // NhanVienGUI
             // 
@@ -834,16 +834,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1150, 720);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.warningMaCV);
+            this.Controls.Add(this.warningSoDT);
+            this.Controls.Add(this.warningDiaChi);
+            this.Controls.Add(this.warningGioiTinh);
+            this.Controls.Add(this.warningNgaySinh);
+            this.Controls.Add(this.warningTen);
             this.Controls.Add(this.warningHo);
             this.Controls.Add(this.warningMaNV);
             this.Controls.Add(this.dgvNhanVien);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnChonChucVu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnReset);
@@ -920,18 +920,18 @@
         private MyCustom.RJButton btnReset;
         private MyCustom.RJButton btnXoa;
         private MyCustom.RJButton btnSua;
-        private MyCustom.RJButton rjButton1;
+        private MyCustom.RJButton btnChonChucVu;
         private System.Windows.Forms.ToolTip ttChucNang;
         private System.Windows.Forms.Panel pnThanhTimKiem;
         private System.Windows.Forms.Label warningMaNV;
         private System.Windows.Forms.ErrorProvider errThongTin;
         private CustomControls.RJControls.RJTextBox txtMaNV;
         private System.Windows.Forms.Label warningHo;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label warningNgaySinh;
+        private System.Windows.Forms.Label warningTen;
+        private System.Windows.Forms.Label warningMaCV;
+        private System.Windows.Forms.Label warningSoDT;
+        private System.Windows.Forms.Label warningDiaChi;
+        private System.Windows.Forms.Label warningGioiTinh;
     }
 }
