@@ -18,8 +18,7 @@ namespace GUI
     public partial class NhanVienGUI : Form
     {
         private NhanVienBLL nvBLL;
-        List<RJTextBox> dsTextBox = new List<RJTextBox>();
-
+       
         public NhanVienGUI()
         {
             InitializeComponent();
@@ -29,7 +28,7 @@ namespace GUI
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-            dgvNhanVien.DataSource = nvBLL.getListHocSinh();
+            dgvNhanVien.DataSource = nvBLL.getListNhanVien();
             dgvNhanVien.EnableHeadersVisualStyles = false;
 
 
@@ -41,6 +40,11 @@ namespace GUI
         }
         private void refeshForm()
         {
+
+            btnThem.BackColor = Color.Transparent;
+            btnSua.BackColor = Color.LightGray;
+            btnXoa.BackColor = Color.LightGray;
+
             txtMaNV.Texts = "";
             txtHo.Texts = "";
             txtTen.Texts = "";
@@ -71,7 +75,10 @@ namespace GUI
             errThongTin.SetError(rdbGioiTinhNu, string.Empty);
             errThongTin.SetError(txtDiaChi, string.Empty);
             errThongTin.SetError(txtSoDT, string.Empty);
-            errThongTin.SetError(txtMaCV, string.Empty);
+            errThongTin.SetError(btnChonChucVu, string.Empty);
+
+            dgvNhanVien.DataSource = nvBLL.getListNhanVien();
+
         }
 
         private void rjTextBox7__TextChanged(object sender, EventArgs e)
@@ -226,6 +233,81 @@ namespace GUI
                     MessageBoxIcon.Error);
             }
         }
+
+        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            #region chỉnh màu button
+            btnThem.BackColor = Color.LightGray;
+            btnSua.BackColor = Color.Transparent;
+            btnXoa.BackColor = Color.Transparent;
+            #endregion
+            int i = dgvNhanVien.CurrentRow.Index;
+            txtMaNV.Texts = dgvNhanVien.Rows[i].Cells[0].Value.ToString();
+            txtHo.Texts = dgvNhanVien.Rows[i].Cells[1].Value.ToString();
+            txtTen.Texts = dgvNhanVien.Rows[i].Cells[2].Value.ToString();
+            dtpNgaySinh.Text = dgvNhanVien.Rows[i].Cells[3].Value.ToString();
+            string GioiTinh = dgvNhanVien.Rows[i].Cells[4].Value.ToString();
+            if(GioiTinh == "Nam")
+            {
+                rdbGioiTinhNam.Checked = true;
+            } else
+            {
+                rdbGioiTinhNu.Checked = true;
+            }
+            txtDiaChi.Texts = dgvNhanVien.Rows[i].Cells[5].Value.ToString();
+            txtSoDT.Texts = dgvNhanVien.Rows[i].Cells[6].Value.ToString();
+            txtMaCV.Texts = dgvNhanVien.Rows[i].Cells[7].Value.ToString();
+
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnThem.Enabled = false;
+
+            
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            
+            string MaNV = txtMaNV.Texts;
+            string Ho = txtHo.Texts;
+            string Ten = txtTen.Texts;
+            DateTime NgaySinh = dtpNgaySinh.Value;
+            string DiaChi = txtDiaChi.Texts;
+            string SoDT = txtSoDT.Texts;
+            string MaCV = txtMaCV.Texts;
+            string GioiTinh = null;
+            string IMG = "";
+            if (rdbGioiTinhNam.Checked)
+            {
+                GioiTinh = "Nam";
+            }
+            else if (rdbGioiTinhNu.Checked)
+            {
+                GioiTinh = "Nữ";
+            }
+            NhanVienDTO nv = new NhanVienDTO(MaNV, Ho, Ten, NgaySinh, GioiTinh, DiaChi, SoDT, IMG, MaCV);
+            int kq = nvBLL.updateNhanVien(nv) ? 1 : 0;
+            if (kq == 1)
+            {
+                MessageBox.Show("Sửa thành công",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                refeshForm();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại",
+                   "Lỗi",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+            }
+        
+        }
+    }
 }
-}
-;

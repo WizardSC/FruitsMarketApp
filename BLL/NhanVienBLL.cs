@@ -17,7 +17,7 @@ namespace BLL
             nvDAL = new NhanVienDAL();
         }
 
-        public DataTable getListHocSinh()
+        public DataTable getListNhanVien()
         {
             return nvDAL.getListNhanVien();
         }
@@ -25,6 +25,11 @@ namespace BLL
         public bool insertNhanVien(NhanVienDTO nv)
         {
             return nvDAL.insertNhanVien(nv);
+        }
+
+        public bool updateNhanVien(NhanVienDTO nv)
+        {
+            return nvDAL.updateNhanVien(nv);
         }
     }
 }
