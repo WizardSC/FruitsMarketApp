@@ -20,6 +20,7 @@ namespace GUI
         {
             InitializeComponent();
             nvBLL = new NhanVienBLL();
+          
         }
 
         private void NhanVien_Load(object sender, EventArgs e)
@@ -27,13 +28,11 @@ namespace GUI
             dgvNhanVien.DataSource = nvBLL.getListHocSinh();
             dgvNhanVien.EnableHeadersVisualStyles = false;
             
-            if (dgvNhanVien != null)
-            {
-                dgvNhanVien.ClearSelection();
-            }
+            
 
-            btnUpdate.BackColor = Color.LightGray;
-            btnDelete.BackColor = Color.LightGray;
+            btnSua.BackColor = Color.LightGray;
+            btnXoa.BackColor = Color.LightGray;
+            Console.WriteLine("Hello");
         }
 
         private void rjTextBox7__TextChanged(object sender, EventArgs e)
@@ -50,5 +49,19 @@ namespace GUI
         {
 
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaNV.Texts))
+            {
+                errThongTin.SetError(txtMaNV, " ");
+                return;
+            } else
+            {
+                errThongTin.SetError(txtMaNV, string.Empty);
+            }
+            MessageBox.Show("Thanh cong");
+        }
     }
 }
+;
