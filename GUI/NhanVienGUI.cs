@@ -12,6 +12,8 @@ using BLL;
 using CustomControls.RJControls;
 using System.Windows.Media.Media3D;
 using System.Security.Cryptography;
+using System.IO;
+using System.Speech.Synthesis.TtsEngine;
 
 namespace GUI
 {
@@ -21,6 +23,7 @@ namespace GUI
         private DataTable nvDataTable = new DataTable();
         private string tempTimKiem;
         private string tempTimKiemGender;
+        
         public NhanVienGUI()
         {
             InitializeComponent();
@@ -125,7 +128,8 @@ namespace GUI
             string SoDT = txtSoDT.Texts;
             string MaCV = txtMaCV.Texts;
             string GioiTinh = null;
-            string IMG = "";
+            
+            byte[] img =this.convertImageToBinaryString(pbImage.Image);
             if (rdbGioiTinhNam.Checked)
             {
                 GioiTinh = "Nam";
@@ -230,7 +234,7 @@ namespace GUI
                 return;
             }
             #endregion
-            NhanVienDTO nv = new NhanVienDTO(MaNV,Ho,Ten,NgaySinh,GioiTinh,DiaChi,SoDT,IMG,MaCV);
+            NhanVienDTO nv = new NhanVienDTO(MaNV,Ho,Ten,NgaySinh,GioiTinh,DiaChi,SoDT,img,MaCV);
             int flag = nvBLL.insertNhanVien(nv) ? 1 : 0;
             if (flag == 1)
             {
@@ -271,7 +275,8 @@ namespace GUI
             txtDiaChi.Texts = dgvNhanVien.Rows[i].Cells[5].Value.ToString();
             txtSoDT.Texts = dgvNhanVien.Rows[i].Cells[6].Value.ToString();
             txtMaCV.Texts = dgvNhanVien.Rows[i].Cells[7].Value.ToString();
-
+            byte[] imageBytes = (byte[])dgvNhanVien.Rows[i].Cells[8].Value;
+            pbImage.Image = convertBinaryStringToImage(imageBytes);
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnThem.Enabled = false;
@@ -310,7 +315,7 @@ namespace GUI
             string SoDT = txtSoDT.Texts;
             string MaCV = txtMaCV.Texts;
             string GioiTinh = null;
-            string IMG = "";
+            byte[] IMG = null;
             if (rdbGioiTinhNam.Checked)
             {
                 GioiTinh = "Nam";
@@ -405,6 +410,36 @@ namespace GUI
             
             tempTimKiemGender = "Nữ";
             txtTimKiem.Texts = "Nữ";
+        }
+
+        private void btnUploadAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if(open.ShowDialog() == DialogResult.OK)
+            {
+                pbImage.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
+            }
+        }
+        private byte[] convertImageToBinaryString(Image img)
+        {
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            return ms.ToArray();
+            //Or we can input a path, and in function, Image will be created by that path and everything take place normal
+            //Or
+            /*return File.ReadAllBytes(path);*/
+        }
+        private Image convertBinaryStringToImage(byte[] binaryString)
+        {
+            MemoryStream ms = new MemoryStream(binaryString);
+            Image img = Image.FromStream(ms);
+            return img;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            Console.WriteLine("Thanh cong");
         }
     }
 }

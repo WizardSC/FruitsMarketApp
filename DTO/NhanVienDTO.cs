@@ -16,14 +16,14 @@ namespace DTO
         private string diaChi;
         private string soDT;
         
-        private string img;
+        private byte[] img;
         private string maCV;
 
         public NhanVienDTO()
         {
         }
 
-        public NhanVienDTO(string maNV, string ho, string ten, DateTime ngaySinh, string gioiTinh, string diaChi, string soDT, string img, string maCV)
+        public NhanVienDTO(string maNV, string ho, string ten, DateTime ngaySinh, string gioiTinh, string diaChi, string soDT, byte[] img, string maCV)
         {
             this.maNV = maNV;
             this.ho = ho;
@@ -44,6 +44,6 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string SoDT { get => soDT; set => soDT = value; }
         public string MaCV { get => maCV; set => maCV = value; }
-        public string Img { get => img; set => img = value; }
+        public byte[] Img { get => img; set => img = value; }
     }
 }
