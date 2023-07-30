@@ -31,5 +31,10 @@ namespace BLL
         {
             return nvDAL.updateNhanVien(nv);
         }
+
+        public bool deleteNhanvien(string MaNV)
+        {
+            return nvDAL.deleteNhanVien(MaNV);
+        }
     }
 }

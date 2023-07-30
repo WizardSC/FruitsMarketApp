@@ -96,5 +96,27 @@ namespace DAL
                 Disconnect();
             }
         }
+
+        public bool deleteNhanVien(string MaNV)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from nhanvien where MaNV = @MaNV";
+                cmd.Connection = conn;
+                cmd.Parameters.Add("@manv", SqlDbType.NVarChar, 20).Value = MaNV;
+                cmd.ExecuteNonQuery();
+                return true;
+            } catch (SqlException ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+                return false;
+            } finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

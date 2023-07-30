@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,9 +79,9 @@
             this.pnLabelThongTin = new GUI.MyCustom.GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new CustomControls.RJControls.RJTextBox();
-            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
-            this.rjRadioButton1 = new CustomControls.RJControls.RJRadioButton();
-            this.rjRadioButton2 = new CustomControls.RJControls.RJRadioButton();
+            this.cbxTimKiem = new CustomControls.RJControls.RJComboBox();
+            this.rdbTimKiemMaleGender = new CustomControls.RJControls.RJRadioButton();
+            this.rdbTimKiemFemaleGender = new CustomControls.RJControls.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnThanhTimKiem.SuspendLayout();
@@ -99,14 +99,14 @@
             this.dgvNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhanVien.ColumnHeadersHeight = 35;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -119,25 +119,24 @@
             this.SoDT,
             this.Column7,
             this.IMG});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvNhanVien.Location = new System.Drawing.Point(408, 64);
-            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvNhanVien.Location = new System.Drawing.Point(306, 52);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvNhanVien.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
@@ -145,7 +144,7 @@
             this.dgvNhanVien.RowTemplate.Height = 26;
             this.dgvNhanVien.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhanVien.Size = new System.Drawing.Size(1109, 805);
+            this.dgvNhanVien.Size = new System.Drawing.Size(832, 654);
             this.dgvNhanVien.TabIndex = 1;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
@@ -230,15 +229,14 @@
             this.IMG.Name = "IMG";
             this.IMG.ReadOnly = true;
             this.IMG.Visible = false;
-            this.IMG.Width = 76;
+            this.IMG.Width = 64;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 265);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(26, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
+            this.label2.Size = new System.Drawing.Size(57, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Mã NV";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -246,10 +244,9 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 327);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(26, 266);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Họ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -257,10 +254,9 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 391);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(26, 318);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -269,10 +265,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 455);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(8, 370);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 22);
+            this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Ngày sinh";
             // 
@@ -280,10 +275,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 639);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(28, 519);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 22);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "Số ĐT";
             // 
@@ -291,20 +285,18 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 521);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(14, 423);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 22);
+            this.label10.Size = new System.Drawing.Size(69, 17);
             this.label10.TabIndex = 25;
             this.label10.Text = "Giới tính";
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 575);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(26, 467);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 23);
+            this.label6.Size = new System.Drawing.Size(57, 19);
             this.label6.TabIndex = 28;
             this.label6.Text = "Địa chỉ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -313,10 +305,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(35, 703);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(26, 571);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 22);
+            this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 31;
             this.label8.Text = "Mã CV";
             // 
@@ -324,10 +315,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.Image = global::GUI.Properties.Resources.placeholder_image;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 82);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -339,13 +329,12 @@
             // pnThanhTimKiem
             // 
             this.pnThanhTimKiem.Controls.Add(this.txtTimKiem);
-            this.pnThanhTimKiem.Controls.Add(this.rjComboBox1);
-            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton1);
-            this.pnThanhTimKiem.Controls.Add(this.rjRadioButton2);
-            this.pnThanhTimKiem.Location = new System.Drawing.Point(408, 4);
-            this.pnThanhTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnThanhTimKiem.Controls.Add(this.cbxTimKiem);
+            this.pnThanhTimKiem.Controls.Add(this.rdbTimKiemMaleGender);
+            this.pnThanhTimKiem.Controls.Add(this.rdbTimKiemFemaleGender);
+            this.pnThanhTimKiem.Location = new System.Drawing.Point(306, 3);
             this.pnThanhTimKiem.Name = "pnThanhTimKiem";
-            this.pnThanhTimKiem.Size = new System.Drawing.Size(1109, 53);
+            this.pnThanhTimKiem.Size = new System.Drawing.Size(832, 43);
             this.pnThanhTimKiem.TabIndex = 38;
             // 
             // warningMaNV
@@ -353,10 +342,9 @@
             this.warningMaNV.AutoSize = true;
             this.warningMaNV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningMaNV.ForeColor = System.Drawing.Color.Red;
-            this.warningMaNV.Location = new System.Drawing.Point(112, 298);
-            this.warningMaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningMaNV.Location = new System.Drawing.Point(84, 242);
             this.warningMaNV.Name = "warningMaNV";
-            this.warningMaNV.Size = new System.Drawing.Size(231, 20);
+            this.warningMaNV.Size = new System.Drawing.Size(181, 15);
             this.warningMaNV.TabIndex = 39;
             this.warningMaNV.Text = "*Bạn phải điền mã nhân viên";
             this.warningMaNV.Visible = false;
@@ -371,10 +359,9 @@
             this.warningHo.AutoSize = true;
             this.warningHo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningHo.ForeColor = System.Drawing.Color.Red;
-            this.warningHo.Location = new System.Drawing.Point(112, 362);
-            this.warningHo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningHo.Location = new System.Drawing.Point(84, 294);
             this.warningHo.Name = "warningHo";
-            this.warningHo.Size = new System.Drawing.Size(152, 20);
+            this.warningHo.Size = new System.Drawing.Size(118, 15);
             this.warningHo.TabIndex = 42;
             this.warningHo.Text = "*Bạn phải nhập họ";
             this.warningHo.Visible = false;
@@ -384,10 +371,9 @@
             this.warningTen.AutoSize = true;
             this.warningTen.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningTen.ForeColor = System.Drawing.Color.Red;
-            this.warningTen.Location = new System.Drawing.Point(112, 426);
-            this.warningTen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningTen.Location = new System.Drawing.Point(84, 346);
             this.warningTen.Name = "warningTen";
-            this.warningTen.Size = new System.Drawing.Size(157, 20);
+            this.warningTen.Size = new System.Drawing.Size(123, 15);
             this.warningTen.TabIndex = 43;
             this.warningTen.Text = "*Bạn phải nhập tên";
             this.warningTen.Visible = false;
@@ -397,10 +383,9 @@
             this.warningNgaySinh.AutoSize = true;
             this.warningNgaySinh.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningNgaySinh.ForeColor = System.Drawing.Color.Red;
-            this.warningNgaySinh.Location = new System.Drawing.Point(112, 490);
-            this.warningNgaySinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningNgaySinh.Location = new System.Drawing.Point(84, 398);
             this.warningNgaySinh.Name = "warningNgaySinh";
-            this.warningNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.warningNgaySinh.Size = new System.Drawing.Size(157, 15);
             this.warningNgaySinh.TabIndex = 44;
             this.warningNgaySinh.Text = "*Bạn phải điền ngày sinh";
             this.warningNgaySinh.Visible = false;
@@ -410,10 +395,9 @@
             this.warningGioiTinh.AutoSize = true;
             this.warningGioiTinh.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningGioiTinh.ForeColor = System.Drawing.Color.Red;
-            this.warningGioiTinh.Location = new System.Drawing.Point(112, 551);
-            this.warningGioiTinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningGioiTinh.Location = new System.Drawing.Point(84, 448);
             this.warningGioiTinh.Name = "warningGioiTinh";
-            this.warningGioiTinh.Size = new System.Drawing.Size(197, 20);
+            this.warningGioiTinh.Size = new System.Drawing.Size(153, 15);
             this.warningGioiTinh.TabIndex = 45;
             this.warningGioiTinh.Text = "*Bạn phải chọn giới tính";
             this.warningGioiTinh.Visible = false;
@@ -423,10 +407,9 @@
             this.warningDiaChi.AutoSize = true;
             this.warningDiaChi.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningDiaChi.ForeColor = System.Drawing.Color.Red;
-            this.warningDiaChi.Location = new System.Drawing.Point(112, 615);
-            this.warningDiaChi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningDiaChi.Location = new System.Drawing.Point(84, 500);
             this.warningDiaChi.Name = "warningDiaChi";
-            this.warningDiaChi.Size = new System.Drawing.Size(183, 20);
+            this.warningDiaChi.Size = new System.Drawing.Size(143, 15);
             this.warningDiaChi.TabIndex = 46;
             this.warningDiaChi.Text = "*Bạn phải nhập địa chỉ";
             this.warningDiaChi.Visible = false;
@@ -436,10 +419,9 @@
             this.warningSoDT.AutoSize = true;
             this.warningSoDT.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningSoDT.ForeColor = System.Drawing.Color.Red;
-            this.warningSoDT.Location = new System.Drawing.Point(112, 679);
-            this.warningSoDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningSoDT.Location = new System.Drawing.Point(84, 552);
             this.warningSoDT.Name = "warningSoDT";
-            this.warningSoDT.Size = new System.Drawing.Size(232, 20);
+            this.warningSoDT.Size = new System.Drawing.Size(180, 15);
             this.warningSoDT.TabIndex = 47;
             this.warningSoDT.Text = "*Bạn phải nhập số điện thoại";
             this.warningSoDT.Visible = false;
@@ -449,10 +431,9 @@
             this.warningMaCV.AutoSize = true;
             this.warningMaCV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warningMaCV.ForeColor = System.Drawing.Color.Red;
-            this.warningMaCV.Location = new System.Drawing.Point(112, 743);
-            this.warningMaCV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.warningMaCV.Location = new System.Drawing.Point(84, 604);
             this.warningMaCV.Name = "warningMaCV";
-            this.warningMaCV.Size = new System.Drawing.Size(192, 20);
+            this.warningMaCV.Size = new System.Drawing.Size(148, 15);
             this.warningMaCV.TabIndex = 48;
             this.warningMaCV.Text = "*Bạn phải chọn chức vụ";
             this.warningMaCV.Visible = false;
@@ -471,10 +452,9 @@
             this.btnChonChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChonChucVu.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChonChucVu.ForeColor = System.Drawing.Color.Black;
-            this.btnChonChucVu.Location = new System.Drawing.Point(336, 703);
-            this.btnChonChucVu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChonChucVu.Location = new System.Drawing.Point(252, 571);
             this.btnChonChucVu.Name = "btnChonChucVu";
-            this.btnChonChucVu.Size = new System.Drawing.Size(40, 36);
+            this.btnChonChucVu.Size = new System.Drawing.Size(30, 29);
             this.btnChonChucVu.TabIndex = 37;
             this.btnChonChucVu.Text = "...";
             this.btnChonChucVu.TextColor = System.Drawing.Color.Black;
@@ -495,10 +475,9 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = global::GUI.Properties.Resources.icons8_pencil_23;
-            this.btnSua.Location = new System.Drawing.Point(133, 790);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Location = new System.Drawing.Point(100, 642);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(53, 49);
+            this.btnSua.Size = new System.Drawing.Size(40, 40);
             this.btnSua.TabIndex = 36;
             this.btnSua.TextColor = System.Drawing.Color.White;
             this.ttChucNang.SetToolTip(this.btnSua, "Sửa");
@@ -520,10 +499,9 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = global::GUI.Properties.Resources.icons8_garbage_23;
-            this.btnXoa.Location = new System.Drawing.Point(228, 790);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(171, 642);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(53, 49);
+            this.btnXoa.Size = new System.Drawing.Size(40, 40);
             this.btnXoa.TabIndex = 35;
             this.btnXoa.TextColor = System.Drawing.Color.White;
             this.ttChucNang.SetToolTip(this.btnXoa, "Xóa");
@@ -544,10 +522,9 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Image = global::GUI.Properties.Resources.icons8_reset_23;
-            this.btnReset.Location = new System.Drawing.Point(323, 790);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Location = new System.Drawing.Point(242, 642);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(53, 49);
+            this.btnReset.Size = new System.Drawing.Size(40, 40);
             this.btnReset.TabIndex = 34;
             this.btnReset.TextColor = System.Drawing.Color.White;
             this.ttChucNang.SetToolTip(this.btnReset, "Reload");
@@ -568,10 +545,9 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = global::GUI.Properties.Resources.icons8_add_32;
-            this.btnThem.Location = new System.Drawing.Point(39, 790);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(29, 642);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(53, 49);
+            this.btnThem.Size = new System.Drawing.Size(40, 40);
             this.btnThem.TabIndex = 33;
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.ttChucNang.SetToolTip(this.btnThem, "Thêm");
@@ -587,15 +563,15 @@
             this.txtMaCV.BorderSize = 1;
             this.txtMaCV.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaCV.Location = new System.Drawing.Point(127, 703);
-            this.txtMaCV.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMaCV.Location = new System.Drawing.Point(95, 571);
+            this.txtMaCV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaCV.Multiline = true;
             this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtMaCV.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtMaCV.PasswordChar = false;
             this.txtMaCV.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMaCV.PlaceholderText = "";
-            this.txtMaCV.Size = new System.Drawing.Size(199, 36);
+            this.txtMaCV.Size = new System.Drawing.Size(149, 29);
             this.txtMaCV.TabIndex = 32;
             this.txtMaCV.Texts = "";
             this.txtMaCV.UnderlinedStyle = false;
@@ -609,15 +585,15 @@
             this.txtSoDT.BorderSize = 1;
             this.txtSoDT.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSoDT.Location = new System.Drawing.Point(127, 639);
-            this.txtSoDT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSoDT.Location = new System.Drawing.Point(95, 519);
+            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Multiline = true;
             this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtSoDT.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtSoDT.PasswordChar = false;
             this.txtSoDT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSoDT.PlaceholderText = "";
-            this.txtSoDT.Size = new System.Drawing.Size(249, 36);
+            this.txtSoDT.Size = new System.Drawing.Size(187, 29);
             this.txtSoDT.TabIndex = 30;
             this.txtSoDT.Texts = "";
             this.txtSoDT.UnderlinedStyle = false;
@@ -631,15 +607,15 @@
             this.txtDiaChi.BorderSize = 1;
             this.txtDiaChi.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(127, 575);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiaChi.Location = new System.Drawing.Point(95, 467);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtDiaChi.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtDiaChi.PasswordChar = false;
             this.txtDiaChi.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDiaChi.PlaceholderText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(249, 36);
+            this.txtDiaChi.Size = new System.Drawing.Size(187, 29);
             this.txtDiaChi.TabIndex = 29;
             this.txtDiaChi.Texts = "";
             this.txtDiaChi.UnderlinedStyle = false;
@@ -649,12 +625,11 @@
             // 
             this.rdbGioiTinhNu.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rdbGioiTinhNu.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbGioiTinhNu.Location = new System.Drawing.Point(259, 512);
-            this.rdbGioiTinhNu.Margin = new System.Windows.Forms.Padding(4);
-            this.rdbGioiTinhNu.MinimumSize = new System.Drawing.Size(0, 26);
+            this.rdbGioiTinhNu.Location = new System.Drawing.Point(194, 416);
+            this.rdbGioiTinhNu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbGioiTinhNu.Name = "rdbGioiTinhNu";
-            this.rdbGioiTinhNu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.rdbGioiTinhNu.Size = new System.Drawing.Size(89, 37);
+            this.rdbGioiTinhNu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbGioiTinhNu.Size = new System.Drawing.Size(67, 30);
             this.rdbGioiTinhNu.TabIndex = 27;
             this.rdbGioiTinhNu.TabStop = true;
             this.rdbGioiTinhNu.Text = "Nữ";
@@ -665,12 +640,11 @@
             // 
             this.rdbGioiTinhNam.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.rdbGioiTinhNam.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbGioiTinhNam.Location = new System.Drawing.Point(161, 512);
-            this.rdbGioiTinhNam.Margin = new System.Windows.Forms.Padding(4);
-            this.rdbGioiTinhNam.MinimumSize = new System.Drawing.Size(0, 26);
+            this.rdbGioiTinhNam.Location = new System.Drawing.Point(121, 416);
+            this.rdbGioiTinhNam.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbGioiTinhNam.Name = "rdbGioiTinhNam";
-            this.rdbGioiTinhNam.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.rdbGioiTinhNam.Size = new System.Drawing.Size(89, 37);
+            this.rdbGioiTinhNam.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbGioiTinhNam.Size = new System.Drawing.Size(67, 30);
             this.rdbGioiTinhNam.TabIndex = 26;
             this.rdbGioiTinhNam.TabStop = true;
             this.rdbGioiTinhNam.Text = "Nam";
@@ -688,11 +662,10 @@
             this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtpNgaySinh.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(127, 448);
-            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(95, 364);
             this.dtpNgaySinh.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(248, 29);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(187, 29);
             this.dtpNgaySinh.SkinColor = System.Drawing.Color.Transparent;
             this.dtpNgaySinh.TabIndex = 24;
             this.dtpNgaySinh.TextColor = System.Drawing.Color.Black;
@@ -706,15 +679,15 @@
             this.txtTen.BorderSize = 1;
             this.txtTen.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTen.Location = new System.Drawing.Point(128, 385);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTen.Location = new System.Drawing.Point(96, 313);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtTen.Multiline = true;
             this.txtTen.Name = "txtTen";
-            this.txtTen.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtTen.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtTen.PasswordChar = false;
             this.txtTen.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTen.PlaceholderText = "";
-            this.txtTen.Size = new System.Drawing.Size(249, 36);
+            this.txtTen.Size = new System.Drawing.Size(187, 29);
             this.txtTen.TabIndex = 13;
             this.txtTen.Texts = "";
             this.txtTen.UnderlinedStyle = false;
@@ -728,15 +701,15 @@
             this.txtHo.BorderSize = 1;
             this.txtHo.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHo.Location = new System.Drawing.Point(128, 321);
-            this.txtHo.Margin = new System.Windows.Forms.Padding(5);
+            this.txtHo.Location = new System.Drawing.Point(96, 261);
+            this.txtHo.Margin = new System.Windows.Forms.Padding(4);
             this.txtHo.Multiline = true;
             this.txtHo.Name = "txtHo";
-            this.txtHo.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtHo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtHo.PasswordChar = false;
             this.txtHo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHo.PlaceholderText = "";
-            this.txtHo.Size = new System.Drawing.Size(249, 36);
+            this.txtHo.Size = new System.Drawing.Size(187, 29);
             this.txtHo.TabIndex = 10;
             this.txtHo.Texts = "";
             this.txtHo.UnderlinedStyle = false;
@@ -751,16 +724,16 @@
             this.txtMaNV.BorderSize = 1;
             this.txtMaNV.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaNV.Location = new System.Drawing.Point(128, 258);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(5);
-            this.txtMaNV.MinimumSize = new System.Drawing.Size(0, 12);
+            this.txtMaNV.Location = new System.Drawing.Point(96, 210);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaNV.MinimumSize = new System.Drawing.Size(0, 10);
             this.txtMaNV.Multiline = true;
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtMaNV.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtMaNV.PasswordChar = false;
             this.txtMaNV.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMaNV.PlaceholderText = "";
-            this.txtMaNV.Size = new System.Drawing.Size(249, 36);
+            this.txtMaNV.Size = new System.Drawing.Size(187, 29);
             this.txtMaNV.TabIndex = 9;
             this.txtMaNV.TabStop = false;
             this.txtMaNV.Texts = "";
@@ -772,10 +745,9 @@
             this.pnLabelThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
             this.pnLabelThongTin.BottomColor = System.Drawing.Color.Empty;
             this.pnLabelThongTin.Controls.Add(this.label1);
-            this.pnLabelThongTin.Location = new System.Drawing.Point(15, 15);
-            this.pnLabelThongTin.Margin = new System.Windows.Forms.Padding(4);
+            this.pnLabelThongTin.Location = new System.Drawing.Point(11, 12);
             this.pnLabelThongTin.Name = "pnLabelThongTin";
-            this.pnLabelThongTin.Size = new System.Drawing.Size(373, 48);
+            this.pnLabelThongTin.Size = new System.Drawing.Size(280, 39);
             this.pnLabelThongTin.TabIndex = 2;
             this.pnLabelThongTin.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
             // 
@@ -784,9 +756,8 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 48);
+            this.label1.Size = new System.Drawing.Size(280, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -800,75 +771,76 @@
             this.txtTimKiem.BorderSize = 2;
             this.txtTimKiem.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(168, 12);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTimKiem.Location = new System.Drawing.Point(126, 10);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Multiline = false;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtTimKiem.PasswordChar = false;
             this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTimKiem.PlaceholderText = "Nhập thông tin cần tìm";
-            this.txtTimKiem.Size = new System.Drawing.Size(344, 35);
+            this.txtTimKiem.Size = new System.Drawing.Size(258, 29);
             this.txtTimKiem.TabIndex = 3;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = true;
+            this.txtTimKiem._TextChanged += new System.EventHandler(this.txtTimKiem__TextChanged);
             // 
-            // rjComboBox1
+            // cbxTimKiem
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.White;
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(12, 11);
-            this.rjComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(67, 37);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(147, 37);
-            this.rjComboBox1.TabIndex = 4;
-            this.rjComboBox1.Texts = "";
+            this.cbxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.cbxTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.cbxTimKiem.BorderSize = 1;
+            this.cbxTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxTimKiem.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.cbxTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.cbxTimKiem.ListBackColor = System.Drawing.Color.White;
+            this.cbxTimKiem.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxTimKiem.Location = new System.Drawing.Point(9, 9);
+            this.cbxTimKiem.MinimumSize = new System.Drawing.Size(50, 30);
+            this.cbxTimKiem.Name = "cbxTimKiem";
+            this.cbxTimKiem.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxTimKiem.Size = new System.Drawing.Size(110, 30);
+            this.cbxTimKiem.TabIndex = 4;
+            this.cbxTimKiem.Texts = "";
+            this.cbxTimKiem.OnSelectedIndexChanged += new System.EventHandler(this.cbxTimKiem_OnSelectedIndexChanged);
             // 
-            // rjRadioButton1
+            // rdbTimKiemMaleGender
             // 
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjRadioButton1.Location = new System.Drawing.Point(521, 11);
-            this.rjRadioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 26);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(89, 37);
-            this.rjRadioButton1.TabIndex = 5;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Nam";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = true;
+            this.rdbTimKiemMaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rdbTimKiemMaleGender.Location = new System.Drawing.Point(391, 9);
+            this.rdbTimKiemMaleGender.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdbTimKiemMaleGender.Name = "rdbTimKiemMaleGender";
+            this.rdbTimKiemMaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbTimKiemMaleGender.Size = new System.Drawing.Size(67, 30);
+            this.rdbTimKiemMaleGender.TabIndex = 5;
+            this.rdbTimKiemMaleGender.TabStop = true;
+            this.rdbTimKiemMaleGender.Text = "Nam";
+            this.rdbTimKiemMaleGender.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbTimKiemMaleGender.UseVisualStyleBackColor = true;
+            this.rdbTimKiemMaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemMaleGender_CheckedChanged);
             // 
-            // rjRadioButton2
+            // rdbTimKiemFemaleGender
             // 
-            this.rjRadioButton2.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rjRadioButton2.Location = new System.Drawing.Point(619, 11);
-            this.rjRadioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 26);
-            this.rjRadioButton2.Name = "rjRadioButton2";
-            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(89, 37);
-            this.rjRadioButton2.TabIndex = 6;
-            this.rjRadioButton2.TabStop = true;
-            this.rjRadioButton2.Text = "Nữ";
-            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton2.UseVisualStyleBackColor = true;
+            this.rdbTimKiemFemaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rdbTimKiemFemaleGender.Location = new System.Drawing.Point(464, 9);
+            this.rdbTimKiemFemaleGender.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdbTimKiemFemaleGender.Name = "rdbTimKiemFemaleGender";
+            this.rdbTimKiemFemaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbTimKiemFemaleGender.Size = new System.Drawing.Size(67, 30);
+            this.rdbTimKiemFemaleGender.TabIndex = 6;
+            this.rdbTimKiemFemaleGender.TabStop = true;
+            this.rdbTimKiemFemaleGender.Text = "Nữ";
+            this.rdbTimKiemFemaleGender.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbTimKiemFemaleGender.UseVisualStyleBackColor = true;
+            this.rdbTimKiemFemaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemGenderNu_CheckedChanged);
             // 
             // NhanVienGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1533, 886);
+            this.ClientSize = new System.Drawing.Size(1150, 718);
             this.Controls.Add(this.warningMaCV);
             this.Controls.Add(this.warningSoDT);
             this.Controls.Add(this.warningDiaChi);
@@ -904,7 +876,6 @@
             this.Controls.Add(this.pnLabelThongTin);
             this.Controls.Add(this.pnThanhTimKiem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NhanVienGUI";
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
@@ -932,9 +903,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IMG;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJTextBox txtTimKiem;
-        private CustomControls.RJControls.RJComboBox rjComboBox1;
-        private CustomControls.RJControls.RJRadioButton rjRadioButton1;
-        private CustomControls.RJControls.RJRadioButton rjRadioButton2;
+        private CustomControls.RJControls.RJRadioButton rdbTimKiemMaleGender;
+        private CustomControls.RJControls.RJRadioButton rdbTimKiemFemaleGender;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJTextBox txtHo;
@@ -969,5 +939,6 @@
         private System.Windows.Forms.Label warningSoDT;
         private System.Windows.Forms.Label warningDiaChi;
         private System.Windows.Forms.Label warningGioiTinh;
+        private CustomControls.RJControls.RJComboBox cbxTimKiem;
     }
 }

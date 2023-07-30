@@ -18,7 +18,9 @@ namespace GUI
     public partial class NhanVienGUI : Form
     {
         private NhanVienBLL nvBLL;
-       
+        private DataTable nvDataTable = new DataTable();
+        private string tempTimKiem;
+        private string tempTimKiemGender;
         public NhanVienGUI()
         {
             InitializeComponent();
@@ -29,14 +31,26 @@ namespace GUI
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = nvBLL.getListNhanVien();
+            
             dgvNhanVien.EnableHeadersVisualStyles = false;
-
+            loadDatatoComboBox(); 
 
 
             btnSua.BackColor = Color.LightGray;
             btnXoa.BackColor = Color.LightGray;
-            Console.WriteLine("Hello");
 
+            rdbTimKiemFemaleGender.Enabled = false;
+            rdbTimKiemMaleGender.Enabled = false;
+            
+
+        }
+        private void loadDatatoComboBox()
+        {
+            cbxTimKiem.Items.Add("Mã NV");
+            cbxTimKiem.Items.Add("Họ");
+            cbxTimKiem.Items.Add("Tên");
+            cbxTimKiem.Items.Add("Giới tính");
+            cbxTimKiem.SelectedIndex = 0;
         }
         private void refeshForm()
         {
@@ -267,7 +281,22 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            string MaNV = txtMaNV.Texts;
+            int kq = nvBLL.deleteNhanvien(MaNV) ? 1 : 0;
+            if(kq == 1)
+            {
+                MessageBox.Show("Xóa thành công",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                refeshForm();
+            } else
+            {
+                MessageBox.Show("Xóa thất bại",
+                    "Lỗi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -308,6 +337,74 @@ namespace GUI
                    MessageBoxIcon.Error);
             }
         
+        }
+        //Tìm kiếm không cần phải duyệt database
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(tempTimKiemGender);
+            DataView dvNhanVien = nvBLL.getListNhanVien().DefaultView;
+            if (tempTimKiem == "Mã NV")
+            {
+                dvNhanVien.RowFilter = "MaNV like '%" + txtTimKiem.Texts + "%'";
+            }
+            if (tempTimKiem == "Họ")
+            {
+                dvNhanVien.RowFilter = "Ho Like '%" + txtTimKiem.Texts + "%'";
+            }
+            if(tempTimKiem== "Tên")
+            {
+                dvNhanVien.RowFilter = "Ten Like '%" + txtTimKiem.Texts + "%'";
+            }
+            if (tempTimKiem == "Giới tính")
+            {
+                if (tempTimKiemGender == "Nam")
+                {
+                    dvNhanVien.RowFilter = "GioiTinh = 'Nam'";
+                }
+                else if (tempTimKiemGender == "Nữ")
+                {
+                    dvNhanVien.RowFilter = "GioiTinh = 'Nữ'";
+                }
+            }
+
+            // Cập nhật nguồn dữ liệu gốc của DataView dựa trên DataView đã lọc
+            dgvNhanVien.DataSource = dvNhanVien.ToTable();
+        }
+
+        private void cbxTimKiem_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            refeshForm();
+            txtTimKiem.Texts = null;
+            tempTimKiem = cbxTimKiem.SelectedItem.ToString();
+            if(tempTimKiem.Equals("Giới tính"))
+            {
+                txtTimKiem.Enabled = false;
+                rdbTimKiemMaleGender.Enabled = true;
+                rdbTimKiemFemaleGender.Enabled = true;
+            } else
+            {
+                txtTimKiem.Texts = "";
+                txtTimKiem.Enabled = true;
+                rdbTimKiemFemaleGender.Checked = false;
+                rdbTimKiemMaleGender.Checked = false;
+                rdbTimKiemMaleGender.Enabled = false;
+                rdbTimKiemFemaleGender.Enabled = false;
+            }
+            
+        }
+
+        private void rdbTimKiemMaleGender_CheckedChanged(object sender, EventArgs e)
+        {
+            tempTimKiemGender = "Nam";
+            txtTimKiem.Texts = "Nam";
+            
+        }
+
+        private void rdbTimKiemGenderNu_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            tempTimKiemGender = "Nữ";
+            txtTimKiem.Texts = "Nữ";
         }
     }
 }
