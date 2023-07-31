@@ -439,19 +439,29 @@ namespace GUI
 
         private void btnUploadAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
+            // Lấy đường dẫn thư mục gốc của ứng dụng
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Kết hợp đường dẫn tương đối để tạo đường dẫn đến thư mục NhanVien
+            string folderPath = Path.Combine(appDirectory, "resources", "image", "NhanVien");
+
+            // Thiết lập đường dẫn ban đầu cho OpenFileDialog
+            OpenFileDialog open = new OpenFileDialog
+            {
+                InitialDirectory = folderPath,
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp",
+                RestoreDirectory = true
+            };
+
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pbImage.Image = Image.FromFile(open.FileName);
                 this.Text = open.FileName;
+
+                pbImage.Tag = txtMaNV.Text;
             }
-            
-                pbImage.Tag = txtMaNV.Texts;
-
-            
-
         }
 
-      
+
     }
 }
