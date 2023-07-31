@@ -14,6 +14,7 @@ using System.Windows.Media.Media3D;
 using System.Security.Cryptography;
 using System.IO;
 using System.Speech.Synthesis.TtsEngine;
+using GUI.Properties;
 
 namespace GUI
 {
@@ -23,7 +24,7 @@ namespace GUI
         private DataTable nvDataTable = new DataTable();
         private string tempTimKiem;
         private string tempTimKiemGender;
-        
+
         public NhanVienGUI()
         {
             InitializeComponent();
@@ -34,9 +35,9 @@ namespace GUI
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = nvBLL.getListNhanVien();
-            
+
             dgvNhanVien.EnableHeadersVisualStyles = false;
-            loadDatatoComboBox(); 
+            loadDatatoComboBox();
 
 
             btnSua.BackColor = Color.LightGray;
@@ -44,7 +45,8 @@ namespace GUI
 
             rdbTimKiemFemaleGender.Enabled = false;
             rdbTimKiemMaleGender.Enabled = false;
-            
+            // Set giá trị Tag của PictureBox
+            pbImage.Tag = "placeholder_image";
 
         }
         private void loadDatatoComboBox()
@@ -84,6 +86,7 @@ namespace GUI
             warningDiaChi.Visible = false;
             warningSoDT.Visible = false;
             warningMaCV.Visible = false;
+            warningUploadAnh.Visible = false;
 
             errThongTin.SetError(txtMaNV, string.Empty);
             errThongTin.SetError(txtHo, string.Empty);
@@ -93,24 +96,27 @@ namespace GUI
             errThongTin.SetError(txtDiaChi, string.Empty);
             errThongTin.SetError(txtSoDT, string.Empty);
             errThongTin.SetError(btnChonChucVu, string.Empty);
-
+            
             dgvNhanVien.DataSource = nvBLL.getListNhanVien();
+            pbImage.Image = Properties.Resources.placeholder_image;
+            pbImage.Tag = "placeholder_image";
 
         }
-
-        private void rjTextBox7__TextChanged(object sender, EventArgs e)
+        //chuyển đổi một hình ảnh thành một dạng biểu diễn nhị phân 
+        private byte[] convertImageToBinaryString(Image img)
         {
-
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            return ms.ToArray();
+            
         }
 
-        private void rjTextBox4__TextChanged(object sender, EventArgs e)
+        //chuyển đổi một dạng biểu diễn nhị phân thành một hình ảnh 
+        private Image convertBinaryStringToImage(byte[] binaryString)
         {
-
-        }
-
-        private void rjRadioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
+            MemoryStream ms = new MemoryStream(binaryString);
+            Image img = Image.FromStream(ms);
+            return img;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -128,18 +134,33 @@ namespace GUI
             string SoDT = txtSoDT.Texts;
             string MaCV = txtMaCV.Texts;
             string GioiTinh = null;
-            
-            byte[] img =this.convertImageToBinaryString(pbImage.Image);
+
+            byte[] img = this.convertImageToBinaryString(pbImage.Image);
             if (rdbGioiTinhNam.Checked)
             {
                 GioiTinh = "Nam";
-            } else if (rdbGioiTinhNu.Checked)
+            }
+            else if (rdbGioiTinhNu.Checked)
             {
                 GioiTinh = "Nữ";
             }
             Console.WriteLine(GioiTinh);
+            Console.WriteLine(pbImage.Tag);
             bool flagTextBox = false;
             #region check textbox rỗng
+            if (pbImage.Tag == "placeholder_image")
+            {
+                // PictureBox đang hiển thị ảnh từ tài nguyên placeholder_image
+                warningUploadAnh.Visible = true;
+                flagTextBox = true;
+            } else
+            {
+                warningUploadAnh.Visible = false;
+
+            }
+            {
+
+            }
             if (string.IsNullOrEmpty(MaNV))
             {
                 errThongTin.SetError(txtMaNV, " ");
@@ -234,7 +255,7 @@ namespace GUI
                 return;
             }
             #endregion
-            NhanVienDTO nv = new NhanVienDTO(MaNV,Ho,Ten,NgaySinh,GioiTinh,DiaChi,SoDT,img,MaCV);
+            NhanVienDTO nv = new NhanVienDTO(MaNV, Ho, Ten, NgaySinh, GioiTinh, DiaChi, SoDT, img, MaCV);
             int flag = nvBLL.insertNhanVien(nv) ? 1 : 0;
             if (flag == 1)
             {
@@ -243,7 +264,8 @@ namespace GUI
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 refeshForm();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Thêm thất bại",
                     "Lỗi",
@@ -265,37 +287,39 @@ namespace GUI
             txtTen.Texts = dgvNhanVien.Rows[i].Cells[2].Value.ToString();
             dtpNgaySinh.Text = dgvNhanVien.Rows[i].Cells[3].Value.ToString();
             string GioiTinh = dgvNhanVien.Rows[i].Cells[4].Value.ToString();
-            if(GioiTinh == "Nam")
+            if (GioiTinh == "Nam")
             {
                 rdbGioiTinhNam.Checked = true;
-            } else
+            }
+            else
             {
                 rdbGioiTinhNu.Checked = true;
             }
             txtDiaChi.Texts = dgvNhanVien.Rows[i].Cells[5].Value.ToString();
             txtSoDT.Texts = dgvNhanVien.Rows[i].Cells[6].Value.ToString();
             txtMaCV.Texts = dgvNhanVien.Rows[i].Cells[7].Value.ToString();
-            byte[] imageBytes = (byte[])dgvNhanVien.Rows[i].Cells[8].Value;
+            byte[] imageBytes = (byte[])dgvNhanVien.Rows[i].Cells[8].Value;            
             pbImage.Image = convertBinaryStringToImage(imageBytes);
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnThem.Enabled = false;
 
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string MaNV = txtMaNV.Texts;
             int kq = nvBLL.deleteNhanvien(MaNV) ? 1 : 0;
-            if(kq == 1)
+            if (kq == 1)
             {
                 MessageBox.Show("Xóa thành công",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 refeshForm();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Xóa thất bại",
                     "Lỗi",
@@ -306,7 +330,7 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+
             string MaNV = txtMaNV.Texts;
             string Ho = txtHo.Texts;
             string Ten = txtTen.Texts;
@@ -315,7 +339,7 @@ namespace GUI
             string SoDT = txtSoDT.Texts;
             string MaCV = txtMaCV.Texts;
             string GioiTinh = null;
-            byte[] IMG = null;
+            byte[] IMG = this.convertImageToBinaryString(pbImage.Image);
             if (rdbGioiTinhNam.Checked)
             {
                 GioiTinh = "Nam";
@@ -341,7 +365,7 @@ namespace GUI
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Error);
             }
-        
+
         }
         //Tìm kiếm không cần phải duyệt database
         private void txtTimKiem__TextChanged(object sender, EventArgs e)
@@ -356,7 +380,7 @@ namespace GUI
             {
                 dvNhanVien.RowFilter = "Ho Like '%" + txtTimKiem.Texts + "%'";
             }
-            if(tempTimKiem== "Tên")
+            if (tempTimKiem == "Tên")
             {
                 dvNhanVien.RowFilter = "Ten Like '%" + txtTimKiem.Texts + "%'";
             }
@@ -381,12 +405,13 @@ namespace GUI
             refeshForm();
             txtTimKiem.Texts = null;
             tempTimKiem = cbxTimKiem.SelectedItem.ToString();
-            if(tempTimKiem.Equals("Giới tính"))
+            if (tempTimKiem.Equals("Giới tính"))
             {
                 txtTimKiem.Enabled = false;
                 rdbTimKiemMaleGender.Enabled = true;
                 rdbTimKiemFemaleGender.Enabled = true;
-            } else
+            }
+            else
             {
                 txtTimKiem.Texts = "";
                 txtTimKiem.Enabled = true;
@@ -395,19 +420,19 @@ namespace GUI
                 rdbTimKiemMaleGender.Enabled = false;
                 rdbTimKiemFemaleGender.Enabled = false;
             }
-            
+
         }
 
         private void rdbTimKiemMaleGender_CheckedChanged(object sender, EventArgs e)
         {
             tempTimKiemGender = "Nam";
             txtTimKiem.Texts = "Nam";
-            
+
         }
 
         private void rdbTimKiemGenderNu_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             tempTimKiemGender = "Nữ";
             txtTimKiem.Texts = "Nữ";
         }
@@ -415,31 +440,18 @@ namespace GUI
         private void btnUploadAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            if(open.ShowDialog() == DialogResult.OK)
+            if (open.ShowDialog() == DialogResult.OK)
             {
                 pbImage.Image = Image.FromFile(open.FileName);
                 this.Text = open.FileName;
             }
-        }
-        private byte[] convertImageToBinaryString(Image img)
-        {
-            MemoryStream ms = new MemoryStream();
-            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            return ms.ToArray();
-            //Or we can input a path, and in function, Image will be created by that path and everything take place normal
-            //Or
-            /*return File.ReadAllBytes(path);*/
-        }
-        private Image convertBinaryStringToImage(byte[] binaryString)
-        {
-            MemoryStream ms = new MemoryStream(binaryString);
-            Image img = Image.FromStream(ms);
-            return img;
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
             
-            Console.WriteLine("Thanh cong");
+                pbImage.Tag = txtMaNV.Texts;
+
+            
+
         }
+
+      
     }
 }

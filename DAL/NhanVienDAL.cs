@@ -83,7 +83,7 @@ namespace DAL
                 cmd.Parameters.Add("@diachi", SqlDbType.NVarChar, 50).Value = nv.DiaChi;
                 cmd.Parameters.Add("@sodt", SqlDbType.NVarChar, 50).Value = nv.SoDT;
                 cmd.Parameters.Add("@macv", SqlDbType.NVarChar, 50).Value = nv.MaCV;
-                cmd.Parameters.Add("@img", SqlDbType.NVarChar, 50).Value = nv.Img;
+                cmd.Parameters.Add("@img", SqlDbType.Image).Value = nv.Img;
                 cmd.Parameters.Add("@manv", SqlDbType.NVarChar, 20).Value = nv.MaNV;
                 cmd.ExecuteNonQuery();
                 return true;
