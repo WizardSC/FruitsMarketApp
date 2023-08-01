@@ -238,6 +238,12 @@
     <Compile Include="GiaoDienGUI.Designer.cs">
       <DependentUpon>GiaoDienGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHangGUI.Designer.cs">
+      <DependentUpon>KhachHangGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCustom\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     <None Include="resources\image\calendarDark.png" />
     <EmbeddedResource Include="GiaoDienGUI.resx">
       <DependentUpon>GiaoDienGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHangGUI.resx">
+      <DependentUpon>KhachHangGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyCustom\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>

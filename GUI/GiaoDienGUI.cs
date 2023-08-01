@@ -133,6 +133,7 @@ namespace GUI
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             hidePnLB(pnLBKhachHang);
+            openChildForm(new KhachHangGUI());
         }
 
         #endregion
