@@ -50,7 +50,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ttChucNang = new System.Windows.Forms.ToolTip(this.components);
+            this.btnUploadAnh = new GUI.MyCustom.RJButton();
+            this.btnSua = new GUI.MyCustom.RJButton();
+            this.btnXoa = new GUI.MyCustom.RJButton();
+            this.btnReset = new GUI.MyCustom.RJButton();
+            this.btnThem = new GUI.MyCustom.RJButton();
             this.pnThanhTimKiem = new System.Windows.Forms.Panel();
+            this.txtTimKiem = new CustomControls.RJControls.RJTextBox();
+            this.cbxTimKiem = new CustomControls.RJControls.RJComboBox();
+            this.rdbTimKiemMaleGender = new CustomControls.RJControls.RJRadioButton();
+            this.rdbTimKiemFemaleGender = new CustomControls.RJControls.RJRadioButton();
             this.warningMaNV = new System.Windows.Forms.Label();
             this.errThongTin = new System.Windows.Forms.ErrorProvider(this.components);
             this.warningHo = new System.Windows.Forms.Label();
@@ -66,12 +75,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pnLabelThongTin = new GUI.MyCustom.GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUploadAnh = new GUI.MyCustom.RJButton();
             this.btnChonChucVu = new GUI.MyCustom.RJButton();
-            this.btnSua = new GUI.MyCustom.RJButton();
-            this.btnXoa = new GUI.MyCustom.RJButton();
-            this.btnReset = new GUI.MyCustom.RJButton();
-            this.btnThem = new GUI.MyCustom.RJButton();
             this.txtMaCV = new CustomControls.RJControls.RJTextBox();
             this.txtSoDT = new CustomControls.RJControls.RJTextBox();
             this.txtDiaChi = new CustomControls.RJControls.RJTextBox();
@@ -81,10 +85,6 @@
             this.txtTen = new CustomControls.RJControls.RJTextBox();
             this.txtHo = new CustomControls.RJControls.RJTextBox();
             this.txtMaNV = new CustomControls.RJControls.RJTextBox();
-            this.txtTimKiem = new CustomControls.RJControls.RJTextBox();
-            this.cbxTimKiem = new CustomControls.RJControls.RJComboBox();
-            this.rdbTimKiemMaleGender = new CustomControls.RJControls.RJRadioButton();
-            this.rdbTimKiemFemaleGender = new CustomControls.RJControls.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.pnThanhTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errThongTin)).BeginInit();
@@ -309,6 +309,123 @@
             // 
             this.ttChucNang.ShowAlways = true;
             // 
+            // btnUploadAnh
+            // 
+            this.btnUploadAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnUploadAnh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnUploadAnh.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUploadAnh.BorderRadius = 20;
+            this.btnUploadAnh.BorderSize = 0;
+            this.btnUploadAnh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUploadAnh.FlatAppearance.BorderSize = 0;
+            this.btnUploadAnh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnUploadAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnUploadAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadAnh.ForeColor = System.Drawing.Color.White;
+            this.btnUploadAnh.Image = global::GUI.Properties.Resources.icons8_upload_26;
+            this.btnUploadAnh.Location = new System.Drawing.Point(242, 107);
+            this.btnUploadAnh.Name = "btnUploadAnh";
+            this.btnUploadAnh.Size = new System.Drawing.Size(40, 40);
+            this.btnUploadAnh.TabIndex = 49;
+            this.btnUploadAnh.TextColor = System.Drawing.Color.White;
+            this.ttChucNang.SetToolTip(this.btnUploadAnh, "Xóa");
+            this.btnUploadAnh.UseVisualStyleBackColor = false;
+            this.btnUploadAnh.Click += new System.EventHandler(this.btnUploadAnh_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnSua.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.BorderRadius = 20;
+            this.btnSua.BorderSize = 2;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.Enabled = false;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = global::GUI.Properties.Resources.icons8_pencil_23;
+            this.btnSua.Location = new System.Drawing.Point(100, 642);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(40, 40);
+            this.btnSua.TabIndex = 36;
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.ttChucNang.SetToolTip(this.btnSua, "Sửa");
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.BorderRadius = 20;
+            this.btnXoa.BorderSize = 2;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.Enabled = false;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.icons8_garbage_23;
+            this.btnXoa.Location = new System.Drawing.Point(171, 642);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(40, 40);
+            this.btnXoa.TabIndex = 35;
+            this.btnXoa.TextColor = System.Drawing.Color.White;
+            this.ttChucNang.SetToolTip(this.btnXoa, "Xóa");
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnReset.BorderColor = System.Drawing.Color.Black;
+            this.btnReset.BorderRadius = 20;
+            this.btnReset.BorderSize = 2;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::GUI.Properties.Resources.icons8_reset_23;
+            this.btnReset.Location = new System.Drawing.Point(242, 642);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(40, 40);
+            this.btnReset.TabIndex = 34;
+            this.btnReset.TextColor = System.Drawing.Color.White;
+            this.ttChucNang.SetToolTip(this.btnReset, "Reload");
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.btnThem.BorderColor = System.Drawing.Color.Black;
+            this.btnThem.BorderRadius = 20;
+            this.btnThem.BorderSize = 2;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.icons8_add_32;
+            this.btnThem.Location = new System.Drawing.Point(29, 642);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(40, 40);
+            this.btnThem.TabIndex = 33;
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.ttChucNang.SetToolTip(this.btnThem, "Thêm");
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // pnThanhTimKiem
             // 
             this.pnThanhTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -320,6 +437,79 @@
             this.pnThanhTimKiem.Name = "pnThanhTimKiem";
             this.pnThanhTimKiem.Size = new System.Drawing.Size(832, 54);
             this.pnThanhTimKiem.TabIndex = 38;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
+            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.txtTimKiem.BorderRadius = 0;
+            this.txtTimKiem.BorderSize = 2;
+            this.txtTimKiem.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTimKiem.Location = new System.Drawing.Point(125, 17);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Multiline = false;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtTimKiem.PasswordChar = false;
+            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTimKiem.PlaceholderText = "Nhập thông tin cần tìm";
+            this.txtTimKiem.Size = new System.Drawing.Size(258, 29);
+            this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.Texts = "";
+            this.txtTimKiem.UnderlinedStyle = true;
+            this.txtTimKiem._TextChanged += new System.EventHandler(this.txtTimKiem__TextChanged);
+            // 
+            // cbxTimKiem
+            // 
+            this.cbxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
+            this.cbxTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.cbxTimKiem.BorderSize = 1;
+            this.cbxTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxTimKiem.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.cbxTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.cbxTimKiem.ListBackColor = System.Drawing.Color.White;
+            this.cbxTimKiem.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxTimKiem.Location = new System.Drawing.Point(8, 16);
+            this.cbxTimKiem.MinimumSize = new System.Drawing.Size(50, 30);
+            this.cbxTimKiem.Name = "cbxTimKiem";
+            this.cbxTimKiem.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxTimKiem.Size = new System.Drawing.Size(110, 30);
+            this.cbxTimKiem.TabIndex = 4;
+            this.cbxTimKiem.Texts = "";
+            this.cbxTimKiem.OnSelectedIndexChanged += new System.EventHandler(this.cbxTimKiem_OnSelectedIndexChanged);
+            // 
+            // rdbTimKiemMaleGender
+            // 
+            this.rdbTimKiemMaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rdbTimKiemMaleGender.Location = new System.Drawing.Point(402, 16);
+            this.rdbTimKiemMaleGender.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdbTimKiemMaleGender.Name = "rdbTimKiemMaleGender";
+            this.rdbTimKiemMaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbTimKiemMaleGender.Size = new System.Drawing.Size(67, 30);
+            this.rdbTimKiemMaleGender.TabIndex = 5;
+            this.rdbTimKiemMaleGender.TabStop = true;
+            this.rdbTimKiemMaleGender.Text = "Nam";
+            this.rdbTimKiemMaleGender.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbTimKiemMaleGender.UseVisualStyleBackColor = true;
+            this.rdbTimKiemMaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemMaleGender_CheckedChanged);
+            // 
+            // rdbTimKiemFemaleGender
+            // 
+            this.rdbTimKiemFemaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
+            this.rdbTimKiemFemaleGender.Location = new System.Drawing.Point(475, 16);
+            this.rdbTimKiemFemaleGender.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdbTimKiemFemaleGender.Name = "rdbTimKiemFemaleGender";
+            this.rdbTimKiemFemaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbTimKiemFemaleGender.Size = new System.Drawing.Size(67, 30);
+            this.rdbTimKiemFemaleGender.TabIndex = 6;
+            this.rdbTimKiemFemaleGender.TabStop = true;
+            this.rdbTimKiemFemaleGender.Text = "Nữ";
+            this.rdbTimKiemFemaleGender.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbTimKiemFemaleGender.UseVisualStyleBackColor = true;
+            this.rdbTimKiemFemaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemGenderNu_CheckedChanged);
             // 
             // warningMaNV
             // 
@@ -491,29 +681,6 @@
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnUploadAnh
-            // 
-            this.btnUploadAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnUploadAnh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnUploadAnh.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUploadAnh.BorderRadius = 20;
-            this.btnUploadAnh.BorderSize = 0;
-            this.btnUploadAnh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUploadAnh.FlatAppearance.BorderSize = 0;
-            this.btnUploadAnh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
-            this.btnUploadAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.btnUploadAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadAnh.ForeColor = System.Drawing.Color.White;
-            this.btnUploadAnh.Image = global::GUI.Properties.Resources.icons8_upload_26;
-            this.btnUploadAnh.Location = new System.Drawing.Point(242, 107);
-            this.btnUploadAnh.Name = "btnUploadAnh";
-            this.btnUploadAnh.Size = new System.Drawing.Size(40, 40);
-            this.btnUploadAnh.TabIndex = 49;
-            this.btnUploadAnh.TextColor = System.Drawing.Color.White;
-            this.ttChucNang.SetToolTip(this.btnUploadAnh, "Xóa");
-            this.btnUploadAnh.UseVisualStyleBackColor = false;
-            this.btnUploadAnh.Click += new System.EventHandler(this.btnUploadAnh_Click);
-            // 
             // btnChonChucVu
             // 
             this.btnChonChucVu.BackColor = System.Drawing.Color.Transparent;
@@ -535,100 +702,6 @@
             this.btnChonChucVu.Text = "...";
             this.btnChonChucVu.TextColor = System.Drawing.Color.Black;
             this.btnChonChucVu.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnSua.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnSua.BorderColor = System.Drawing.Color.Black;
-            this.btnSua.BorderRadius = 20;
-            this.btnSua.BorderSize = 2;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.Enabled = false;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
-            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Image = global::GUI.Properties.Resources.icons8_pencil_23;
-            this.btnSua.Location = new System.Drawing.Point(100, 642);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(40, 40);
-            this.btnSua.TabIndex = 36;
-            this.btnSua.TextColor = System.Drawing.Color.White;
-            this.ttChucNang.SetToolTip(this.btnSua, "Sửa");
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnXoa.BorderColor = System.Drawing.Color.Black;
-            this.btnXoa.BorderRadius = 20;
-            this.btnXoa.BorderSize = 2;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Enabled = false;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
-            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Image = global::GUI.Properties.Resources.icons8_garbage_23;
-            this.btnXoa.Location = new System.Drawing.Point(171, 642);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(40, 40);
-            this.btnXoa.TabIndex = 35;
-            this.btnXoa.TextColor = System.Drawing.Color.White;
-            this.ttChucNang.SetToolTip(this.btnXoa, "Xóa");
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnReset.BorderColor = System.Drawing.Color.Black;
-            this.btnReset.BorderRadius = 20;
-            this.btnReset.BorderSize = 2;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
-            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Image = global::GUI.Properties.Resources.icons8_reset_23;
-            this.btnReset.Location = new System.Drawing.Point(242, 642);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(40, 40);
-            this.btnReset.TabIndex = 34;
-            this.btnReset.TextColor = System.Drawing.Color.White;
-            this.ttChucNang.SetToolTip(this.btnReset, "Reload");
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.btnThem.BorderColor = System.Drawing.Color.Black;
-            this.btnThem.BorderRadius = 20;
-            this.btnThem.BorderSize = 2;
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(138)))), ((int)(((byte)(74)))));
-            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::GUI.Properties.Resources.icons8_add_32;
-            this.btnThem.Location = new System.Drawing.Point(29, 642);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(40, 40);
-            this.btnThem.TabIndex = 33;
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.ttChucNang.SetToolTip(this.btnThem, "Thêm");
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtMaCV
             // 
@@ -812,79 +885,6 @@
             this.txtMaNV.TabStop = false;
             this.txtMaNV.Texts = "";
             this.txtMaNV.UnderlinedStyle = false;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.txtTimKiem.BorderRadius = 0;
-            this.txtTimKiem.BorderSize = 2;
-            this.txtTimKiem.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(125, 17);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimKiem.Multiline = false;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.txtTimKiem.PasswordChar = false;
-            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTimKiem.PlaceholderText = "Nhập thông tin cần tìm";
-            this.txtTimKiem.Size = new System.Drawing.Size(258, 29);
-            this.txtTimKiem.TabIndex = 3;
-            this.txtTimKiem.Texts = "";
-            this.txtTimKiem.UnderlinedStyle = true;
-            this.txtTimKiem._TextChanged += new System.EventHandler(this.txtTimKiem__TextChanged);
-            // 
-            // cbxTimKiem
-            // 
-            this.cbxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.cbxTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.cbxTimKiem.BorderSize = 1;
-            this.cbxTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbxTimKiem.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.cbxTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.cbxTimKiem.ListBackColor = System.Drawing.Color.White;
-            this.cbxTimKiem.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxTimKiem.Location = new System.Drawing.Point(8, 16);
-            this.cbxTimKiem.MinimumSize = new System.Drawing.Size(50, 30);
-            this.cbxTimKiem.Name = "cbxTimKiem";
-            this.cbxTimKiem.Padding = new System.Windows.Forms.Padding(1);
-            this.cbxTimKiem.Size = new System.Drawing.Size(110, 30);
-            this.cbxTimKiem.TabIndex = 4;
-            this.cbxTimKiem.Texts = "";
-            this.cbxTimKiem.OnSelectedIndexChanged += new System.EventHandler(this.cbxTimKiem_OnSelectedIndexChanged);
-            // 
-            // rdbTimKiemMaleGender
-            // 
-            this.rdbTimKiemMaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rdbTimKiemMaleGender.Location = new System.Drawing.Point(402, 16);
-            this.rdbTimKiemMaleGender.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rdbTimKiemMaleGender.Name = "rdbTimKiemMaleGender";
-            this.rdbTimKiemMaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rdbTimKiemMaleGender.Size = new System.Drawing.Size(67, 30);
-            this.rdbTimKiemMaleGender.TabIndex = 5;
-            this.rdbTimKiemMaleGender.TabStop = true;
-            this.rdbTimKiemMaleGender.Text = "Nam";
-            this.rdbTimKiemMaleGender.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rdbTimKiemMaleGender.UseVisualStyleBackColor = true;
-            this.rdbTimKiemMaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemMaleGender_CheckedChanged);
-            // 
-            // rdbTimKiemFemaleGender
-            // 
-            this.rdbTimKiemFemaleGender.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(112)))), ((int)(((byte)(0)))));
-            this.rdbTimKiemFemaleGender.Location = new System.Drawing.Point(475, 16);
-            this.rdbTimKiemFemaleGender.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rdbTimKiemFemaleGender.Name = "rdbTimKiemFemaleGender";
-            this.rdbTimKiemFemaleGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rdbTimKiemFemaleGender.Size = new System.Drawing.Size(67, 30);
-            this.rdbTimKiemFemaleGender.TabIndex = 6;
-            this.rdbTimKiemFemaleGender.TabStop = true;
-            this.rdbTimKiemFemaleGender.Text = "Nữ";
-            this.rdbTimKiemFemaleGender.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rdbTimKiemFemaleGender.UseVisualStyleBackColor = true;
-            this.rdbTimKiemFemaleGender.CheckedChanged += new System.EventHandler(this.rdbTimKiemGenderNu_CheckedChanged);
             // 
             // NhanVienGUI
             // 
