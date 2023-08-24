@@ -41,6 +41,7 @@
             this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMG = new System.Windows.Forms.DataGridViewImageColumn();
             this.DiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,8 @@
             this.DiaChi,
             this.SoDT,
             this.IMG,
-            this.DiemTichLuy});
+            this.DiemTichLuy,
+            this.TrangThai});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,11 +83,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvKhachHang.Location = new System.Drawing.Point(279, 82);
+            this.dgvKhachHang.Location = new System.Drawing.Point(372, 101);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvKhachHang.MultiSelect = false;
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.ReadOnly = true;
             this.dgvKhachHang.RowHeadersVisible = false;
+            this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -97,13 +101,14 @@
             this.dgvKhachHang.RowTemplate.Height = 26;
             this.dgvKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(859, 626);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1145, 770);
             this.dgvKhachHang.TabIndex = 0;
             // 
             // MaKH
             // 
             this.MaKH.DataPropertyName = "MaKH";
             this.MaKH.HeaderText = "Mã KH";
+            this.MaKH.MinimumWidth = 6;
             this.MaKH.Name = "MaKH";
             this.MaKH.ReadOnly = true;
             // 
@@ -111,6 +116,7 @@
             // 
             this.Ho.DataPropertyName = "Ho";
             this.Ho.HeaderText = "Họ";
+            this.Ho.MinimumWidth = 6;
             this.Ho.Name = "Ho";
             this.Ho.ReadOnly = true;
             // 
@@ -118,6 +124,7 @@
             // 
             this.Ten.DataPropertyName = "Ten";
             this.Ten.HeaderText = "Tên";
+            this.Ten.MinimumWidth = 6;
             this.Ten.Name = "Ten";
             this.Ten.ReadOnly = true;
             // 
@@ -125,6 +132,7 @@
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.MinimumWidth = 6;
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
             // 
@@ -132,6 +140,7 @@
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.MinimumWidth = 6;
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
             // 
@@ -139,6 +148,7 @@
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
             // 
@@ -146,6 +156,7 @@
             // 
             this.SoDT.DataPropertyName = "SoDT";
             this.SoDT.HeaderText = "Số ĐT";
+            this.SoDT.MinimumWidth = 6;
             this.SoDT.Name = "SoDT";
             this.SoDT.ReadOnly = true;
             // 
@@ -153,6 +164,7 @@
             // 
             this.IMG.DataPropertyName = "IMG";
             this.IMG.HeaderText = "IMG";
+            this.IMG.MinimumWidth = 6;
             this.IMG.Name = "IMG";
             this.IMG.ReadOnly = true;
             this.IMG.Visible = false;
@@ -161,17 +173,27 @@
             // 
             this.DiemTichLuy.DataPropertyName = "DiemTichLuy";
             this.DiemTichLuy.HeaderText = "Điểm tích lũy";
+            this.DiemTichLuy.MinimumWidth = 6;
             this.DiemTichLuy.Name = "DiemTichLuy";
             this.DiemTichLuy.ReadOnly = true;
             // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.MinimumWidth = 6;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
             // KhachHangGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1150, 720);
+            this.ClientSize = new System.Drawing.Size(1533, 886);
             this.Controls.Add(this.dgvKhachHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KhachHangGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHangGUI";
@@ -193,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
         private System.Windows.Forms.DataGridViewImageColumn IMG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemTichLuy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }
