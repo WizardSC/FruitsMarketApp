@@ -22,10 +22,12 @@ namespace DAL
                 cmd.Connection = conn;
                 SqlDataAdapter adt = new SqlDataAdapter(cmd);
                 adt.Fill(dt);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return null;
-            } finally
+            }
+            finally
             {
                 Disconnect();
             }
@@ -53,7 +55,8 @@ namespace DAL
                 cmd.Parameters.Add("@TrangThai", SqlDbType.NVarChar, 20).Value = kh.TrangThai;
                 cmd.ExecuteNonQuery();
                 return true;
-            } catch (SqlException ex)
+            }
+            catch (SqlException ex)
             {
                 Console.WriteLine("Lỗi: " + ex.Message);
                 return false;
@@ -63,6 +66,37 @@ namespace DAL
                 Disconnect();
             }
         }
+        public bool updateKhachHang(KhachHangDTO kh)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update khachhang set Ho = @Ho, Ten = @Ten, @NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, DiaChi = @DiaChi, SoDT = @SoDT, IMG = @IMG, TrangThai = @TrangThai where MaKH = @MaKH";
+                cmd.Connection = conn;
+                cmd.Parameters.Add("@ho", SqlDbType.NVarChar, 50).Value = kh.Ho;
+                cmd.Parameters.Add("@ten", SqlDbType.NVarChar, 50).Value = kh.Ten;
+                cmd.Parameters.Add("@ngaysinh", SqlDbType.Date).Value = kh.NgaySinh;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar, 50).Value = kh.GioiTinh;
+                cmd.Parameters.Add("@diachi", SqlDbType.NVarChar, 50).Value = kh.DiaChi;
+                cmd.Parameters.Add("@sodt", SqlDbType.NVarChar, 50).Value = kh.SoDT;
+                cmd.Parameters.Add("@img", SqlDbType.Image).Value = kh.Img;
+                cmd.Parameters.Add("@trangthai", SqlDbType.NVarChar, 50).Value = kh.TrangThai;
+                cmd.Parameters.Add("@manv", SqlDbType.NVarChar, 20).Value = kh.MaKH;
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
     }
+}
 
