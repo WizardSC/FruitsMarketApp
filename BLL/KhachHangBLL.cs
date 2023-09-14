@@ -13,7 +13,7 @@ namespace BLL
     public class KhachHangBLL
     {
         private KhachHangDAL khDAL;
-
+        private List<KhachHangDTO> listKhachHang = null;
         public KhachHangBLL()
         {
             khDAL = new KhachHangDAL();
@@ -24,9 +24,22 @@ namespace BLL
             return khDAL.getListKhachHang();
         }
 
+       
+
+
         public bool insertKhachHang(KhachHangDTO kh)
         {
             return khDAL.insertKhachHang(kh);
+        }
+
+        public bool updateKhachHang(KhachHangDTO kh)
+        {
+            return khDAL.updateKhachHang(kh);
+        }
+
+        public bool deleteKhachHang(string MaKH)
+        {
+            return khDAL.deleteKhachHang(MaKH);
         }
     }
 }

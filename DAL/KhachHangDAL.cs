@@ -34,6 +34,8 @@ namespace DAL
             return dt;
         }
 
+       
+
         public bool insertKhachHang(KhachHangDTO kh)
         {
             try
@@ -83,7 +85,31 @@ namespace DAL
                 cmd.Parameters.Add("@sodt", SqlDbType.NVarChar, 50).Value = kh.SoDT;
                 cmd.Parameters.Add("@img", SqlDbType.Image).Value = kh.Img;
                 cmd.Parameters.Add("@trangthai", SqlDbType.NVarChar, 50).Value = kh.TrangThai;
-                cmd.Parameters.Add("@manv", SqlDbType.NVarChar, 20).Value = kh.MaKH;
+                cmd.Parameters.Add("@makh", SqlDbType.NVarChar, 20).Value = kh.MaKH;
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
+        public bool deleteKhachHang(string MaKH)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from khachhang where MaKH = @MaKH";
+                cmd.Connection = conn;
+                cmd.Parameters.Add("@makh", SqlDbType.NVarChar, 20).Value = MaKH;
                 cmd.ExecuteNonQuery();
                 return true;
             }

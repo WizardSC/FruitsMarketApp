@@ -420,6 +420,7 @@ namespace GUI
                 rdbTimKiemMaleGender.Enabled = false;
                 rdbTimKiemFemaleGender.Enabled = false;
             }
+            Console.WriteLine(tempTimKiem);
 
         }
 
