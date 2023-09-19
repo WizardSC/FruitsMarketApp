@@ -467,5 +467,10 @@ namespace GUI
         {
 
         }
+
+        private void dgvNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvNhanVien.ClearSelection();
+        }
     }
 }

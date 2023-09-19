@@ -19,10 +19,13 @@ namespace GUI
         private string tempTimKiem;
         private string tempFrom = "";
         private string tempTo = "";
+        private string currentFilter = "";
+        private string searchFilter = "";
         public KhachHangGUI()
         {
             InitializeComponent();
             khBLL = new KhachHangBLL();
+
         }
 
 
@@ -78,17 +81,22 @@ namespace GUI
             btnThem.BackColor = Color.Transparent;
 
             pnFilter.Visible = false;
-            pnSearch.Visible = true;
+            
             btnFilter.BackColor = Color.FromArgb(215, 215, 215);
             btnFilter.BackgroundColor = Color.FromArgb(215, 215, 215);
 
-            btnSearch.BackColor = Color.FromArgb(255, 112, 0);
-            btnSearch.BackgroundColor = Color.FromArgb(255, 112, 0);
-
-
             loadMaKH();
         }
-        
+
+        private void refreshSearch()
+        {
+            currentFilter = "";
+            pnFilter.SendToBack();
+            cbxTimKiem.SelectedIndex = 0;
+            tempTimKiem = cbxTimKiem.SelectedItem.ToString();
+           
+        }
+
         //Hàm load mã KH
         private void loadMaKH()
         {
@@ -97,7 +105,7 @@ namespace GUI
             foreach (DataRow row in dataKH.Rows)
             {
                 lastMaKH = row["MaKH"].ToString();
-               
+
 
             }
             if (lastMaKH == "")
@@ -105,13 +113,15 @@ namespace GUI
                 txtMaKH.Texts = "KH001";
             }
             int tempNum = int.Parse(lastMaKH.Substring(2));
-            if((tempNum + 1) >= 10)
+            if ((tempNum + 1) >= 10)
             {
-                txtMaKH.Texts = "KH0" + (tempNum+1).ToString();
-            } else if (tempNum >= 1 && tempNum < 10) {
-                txtMaKH.Texts = "KH00" + (tempNum+1).ToString();
+                txtMaKH.Texts = "KH0" + (tempNum + 1).ToString();
             }
-            
+            else if (tempNum >= 1 && tempNum < 10)
+            {
+                txtMaKH.Texts = "KH00" + (tempNum + 1).ToString();
+            }
+
         }
         //Hàm load data lên combobox
         private void loadToComboBox()
@@ -127,7 +137,7 @@ namespace GUI
         {
             dgvKhachHang.DataSource = khBLL.getListKhachHang();
             dgvKhachHang.EnableHeadersVisualStyles = false;
-            
+
             btnSua.BackColor = Color.LightGray;
             btnXoa.BackColor = Color.LightGray;
 
@@ -144,7 +154,7 @@ namespace GUI
             pbImage.Image = Properties.Resources.placeholder_image;
             pbImage.Tag = "placeholder_image";
 
-            
+
 
         }
 
@@ -228,6 +238,7 @@ namespace GUI
         {
             refreshForm();
             refreshValue();
+            refreshSearch();
         }
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -339,34 +350,21 @@ namespace GUI
                        MessageBoxButtons.OK,
                        MessageBoxIcon.Error);
                 }
-            } else if(choice == DialogResult.No)
+            }
+            else if (choice == DialogResult.No)
             {
                 return;
             }
-                
+
 
         }
 
-        private void txtTimKiem__TextChanged(object sender, EventArgs e)
-        {
-            refreshForm();
 
-            DataView dvKhachHang = khBLL.getListKhachHang().DefaultView;
-            
-           
-            switch (tempTimKiem)
-            {
-                case "Mã KH":
-                    dvKhachHang.RowFilter = "MaKH like '%" + txtTimKiem.Texts + "%'";
-                    break;
-            }
-            dgvKhachHang.DataSource = dvKhachHang.ToTable();
-        }
 
         private void cbxTimKiem_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             tempTimKiem = cbxTimKiem.SelectedItem.ToString();
-            
+
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
@@ -374,13 +372,13 @@ namespace GUI
             btnFilter.BackColor = Color.FromArgb(255, 112, 0);
             btnFilter.BackgroundColor = Color.FromArgb(255, 112, 0);
 
-            btnSearch.BackColor = Color.FromArgb(215, 215, 215);
-            btnSearch.BackgroundColor = Color.FromArgb(215, 215, 215);
-
             pnFilter.Visible = true;
-            pnSearch.Visible = false;
+            
 
             //refreshForm();
+            this.panel4.Visible = !this.panel4.Visible;
+            this.panel4.BringToFront();
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -388,11 +386,12 @@ namespace GUI
             btnFilter.BackColor = Color.FromArgb(215, 215, 215);
             btnFilter.BackgroundColor = Color.FromArgb(215, 215, 215);
 
-            btnSearch.BackColor = Color.FromArgb(255, 112, 0);
-            btnSearch.BackgroundColor = Color.FromArgb(255, 112, 0);
+         
 
             pnSearch.Visible = true;
             pnFilter.Visible = false;
+
+            
 
             //refreshForm();
 
@@ -403,51 +402,85 @@ namespace GUI
             dgvKhachHang.ClearSelection();
             dgvKhachHang.CurrentCell = null;
         }
-
-        
-
-        private void searchDiemTichLuy(int minValue, int maxValue)
+        private void applyFilters()
         {
             DataView dvKhachHang = khBLL.getListKhachHang().DefaultView;
-            dvKhachHang.RowFilter = $"DiemTichLuy >= {minValue} AND DiemTichLuy <= {maxValue}";
+            dvKhachHang.RowFilter = currentFilter;
             dgvKhachHang.DataSource = dvKhachHang.ToTable();
-
         }
-        private void txtFrom__TextChanged(object sender, EventArgs e)
+
+        private void updateFilters()
         {
+            currentFilter = "";
+            Console.WriteLine("Lần Đầu: " + currentFilter);
+
+            string tempFilter;
+
             int minValue;
             int maxValue;
-            tempFrom = txtFrom.Texts;
-            if (tempTo.Equals("") || tempFrom.Equals(""))
+            if (!string.IsNullOrEmpty(tempFrom) && !string.IsNullOrEmpty(tempTo))
             {
-                
-            } else if (!tempTo.Equals("") && !tempFrom.Equals(""))
-            {
-                
                 int.TryParse(txtFrom.Texts, out minValue);
                 int.TryParse(txtTo.Texts, out maxValue);
-                searchDiemTichLuy(minValue, maxValue);
+                tempFilter = $"DiemTichLuy >= {minValue} AND DiemTichLuy <= {maxValue}";
             }
+            else
+            {
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(searchFilter) && !string.IsNullOrEmpty(tempFilter))
+            {               
+                currentFilter = $"{searchFilter} AND {tempFilter}";
+            }
+            applyFilters();
+            Console.WriteLine("Lần hai: " + currentFilter);
+
+        }
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        
+        
+        private void txtFrom__TextChanged(object sender, EventArgs e)
+        {
+        
+            tempFrom = txtFrom.Texts;
+          
         }
 
         private void txtTo__TextChanged(object sender, EventArgs e)
         {
-            int minValue;
-            int maxValue;
             tempTo = txtTo.Texts;
-            if (tempTo.Equals("") || tempFrom.Equals(""))
-            {
-                
+           
+        }
 
-            }
-            else if (!tempTo.Equals("") && !tempFrom.Equals(""))
+        private void label15_Click(object sender, EventArgs e)
+        {
+            
+            Console.WriteLine("currentFilter" + currentFilter);
+            Console.WriteLine("temptimKiem" + tempTimKiem);
+            switch (tempTimKiem)
             {
-              
-
-                int.TryParse(txtFrom.Texts, out minValue);
-                int.TryParse(txtTo.Texts, out maxValue);
-                searchDiemTichLuy(minValue, maxValue);
+                case "Mã KH":
+                    searchFilter = $"MaKH like '%{txtTimKiem.Texts}%'";
+                    currentFilter = searchFilter;
+                    Console.WriteLine(currentFilter);
+                    applyFilters();
+                    //dvKhachHang.RowFilter = "MaKH like '%" + txtTimKiem.Texts + "%'";
+                    break;
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            updateFilters();
+            applyFilters();
         }
     }
 }

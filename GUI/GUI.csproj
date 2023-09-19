@@ -244,6 +244,9 @@
     <Compile Include="KhachHangGUI.Designer.cs">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustom\BiggerCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MyCustom\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -277,6 +280,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="resources\image\icons8-search-25.png" />
     <None Include="resources\image\icon_filter.png" />
     <None Include="resources\image\icons8-upload.gif" />
     <None Include="resources\image\icons8-upload-26.png" />
